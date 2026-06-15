@@ -1,0 +1,119 @@
+{
+  "_default": [
+    { "title": "How to Upsolve Competitive Programming Problems", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=JXT_GFcb5gw" },
+    { "title": "How to Get Good at Coding Interviews", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=hjvHfNDfvDQ" }
+  ],
+  "dynamic-programming": [
+    { "title": "Dynamic Programming - Full Playlist (DP 1 to 56)", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY" },
+    { "title": "5 Steps to Solve Any Dynamic Programming Problem", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk" },
+    { "title": "Dynamic Programming - Learn to Solve Algorithmic Problems", "channel": "freeCodeCamp", "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk" }
+  ],
+  "trie": [
+    { "title": "Trie Data Structure - Implementation & Problems", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp" },
+    { "title": "Implement Trie (Prefix Tree) - LeetCode 208", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=oobqoCJlHA0" }
+  ],
+  "segment-tree": [
+    { "title": "Segment Trees - Build, Query, Update", "channel": "William Fiset", "url": "https://www.youtube.com/watch?v=ZBHKZF5w4YU" },
+    { "title": "Segment Tree (Point + Range Updates) Explained", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=Oq2E2yGadnU" }
+  ],
+  "graph": [
+    { "title": "Graph Series - Full Playlist (BFS, DFS & more)", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn" },
+    { "title": "Graph Algorithms for Technical Interviews", "channel": "freeCodeCamp", "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU" }
+  ],
+  "union-find": [
+    { "title": "Union-Find (Disjoint Set Union) Explained", "channel": "William Fiset", "url": "https://www.youtube.com/watch?v=ibjEGG7ylHk" },
+    { "title": "Disjoint Set | Union by Rank & Path Compression", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/watch?v=aBxjDBC4M1U" }
+  ],
+  "topological-sort": [
+    { "title": "Topological Sort (Kahn's Algo + DFS)", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/watch?v=73sneFXuTEg" },
+    { "title": "Topological Sort - Course Schedule", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=EgI5nU9etnU" }
+  ],
+  "shortest-path": [
+    { "title": "Dijkstra's Shortest Path Algorithm", "channel": "William Fiset", "url": "https://www.youtube.com/watch?v=pSqmAO-m7Lk" },
+    { "title": "Shortest Path Algorithms (Dijkstra, Bellman-Ford)", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/watch?v=V6H1qAeB-l4" }
+  ],
+  "binary-search": [
+    { "title": "Binary Search - Full Playlist (Concept + Problems)", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0pMFMWuuvDNMAkoQFi-h0ZF" },
+    { "title": "Binary Search Algorithm - The Template", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=U1VYCGTpV0g" }
+  ],
+  "greedy": [
+    { "title": "Greedy Algorithms - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rF1w2Koyh78zafB0cz7tea" },
+    { "title": "When to Use a Greedy Algorithm", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=vKnaXrx9-1k" }
+  ],
+  "bit-manipulation": [
+    { "title": "Bit Manipulation - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rnqh8QsJaHyIX7KUiaPUv7" },
+    { "title": "Bit Manipulation Tricks for Interviews", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=xXKL9YBWgCY" }
+  ],
+  "two-pointers": [
+    { "title": "Two Pointers Technique Explained", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=jzZsG8n2R9A" },
+    { "title": "Two Pointer + Sliding Window Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0q7vrFA_HEWcqRqMpCXzYAL" }
+  ],
+  "sliding-window": [
+    { "title": "Sliding Window - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0q7vrFA_HEWcqRqMpCXzYAL" },
+    { "title": "Sliding Window Technique - The Pattern", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=GcW4mgmgSbw" }
+  ],
+  "backtracking": [
+    { "title": "Recursion & Backtracking - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9" },
+    { "title": "Backtracking - The Subsets/Permutations Template", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=REOH22Xwdkk" }
+  ],
+  "heap-priority-queue": [
+    { "title": "Heaps / Priority Queue - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rUlAQUre9_3yNF2qNncEZK" },
+    { "title": "Heap / Priority Queue Explained", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=hW8PrQrvMNc" }
+  ],
+  "stack": [
+    { "title": "Stack & Queue - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0pOd5zvVVSzgpo6BaCpHT9c" },
+    { "title": "Monotonic Stack - The Pattern", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=Dq_ObZwTY_Q" }
+  ],
+  "monotonic-stack": [
+    { "title": "Monotonic Stack Pattern Explained", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=Dq_ObZwTY_Q" },
+    { "title": "Monotonic Stack Problems", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0pOd5zvVVSzgpo6BaCpHT9c" }
+  ],
+  "binary-tree": [
+    { "title": "Binary Trees - Full Playlist (Traversals & Problems)", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk" },
+    { "title": "Binary Tree Algorithms for Interviews", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=fAAZixBzIAI" }
+  ],
+  "tree": [
+    { "title": "Trees - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk" },
+    { "title": "Tree DFS / BFS Patterns", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=fAAZixBzIAI" }
+  ],
+  "depth-first-search": [
+    { "title": "DFS Explained - Graph & Tree", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/watch?v=Qzf1a--rhp8" },
+    { "title": "Depth First Search Algorithm", "channel": "William Fiset", "url": "https://www.youtube.com/watch?v=7fujbpJ0LB4" }
+  ],
+  "breadth-first-search": [
+    { "title": "BFS Explained - Graph & Tree", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/watch?v=-tgVpUgsQ5k" },
+    { "title": "Breadth First Search Algorithm", "channel": "William Fiset", "url": "https://www.youtube.com/watch?v=oDqjPvD54Ss" }
+  ],
+  "binary-search-tree": [
+    { "title": "Binary Search Tree - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0qVGGTM7CMtv4iVedYAh3qj" },
+    { "title": "BST Operations Explained", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=Gj5z6_z3byg" }
+  ],
+  "math": [
+    { "title": "Math for Competitive Programming", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=fpY-W08fa2A" },
+    { "title": "Number Theory Basics", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz" }
+  ],
+  "number-theory": [
+    { "title": "Number Theory for Competitive Programming", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=eyu7Hz0g_44" },
+    { "title": "Modular Arithmetic & GCD", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz" }
+  ],
+  "combinatorics": [
+    { "title": "Combinatorics for Programming Contests", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=eyu7Hz0g_44" },
+    { "title": "Combinatorics & Modular Inverse", "channel": "William Fiset", "url": "https://www.youtube.com/watch?v=O3nyJtKvEW8" }
+  ],
+  "prefix-sum": [
+    { "title": "Prefix Sum Technique Explained", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/watch?v=pVS3yhlzrlQ" },
+    { "title": "Prefix Sums & Range Queries", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=PVHwQYG8C-c" }
+  ],
+  "hash-table": [
+    { "title": "Hashing Explained", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/watch?v=KEs5UyBJ39g" },
+    { "title": "Hash Maps for Interviews", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q" }
+  ],
+  "string": [
+    { "title": "Strings - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rVwua0kKYlsS_ik_1lyVK_" },
+    { "title": "String Algorithms (KMP, Z, Rabin-Karp)", "channel": "Errichto", "url": "https://www.youtube.com/watch?v=EL4ZbRF587g" }
+  ],
+  "array": [
+    { "title": "Arrays - Full Playlist", "channel": "takeUforward / Striver", "url": "https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB" },
+    { "title": "Array Patterns for Interviews", "channel": "NeetCode", "url": "https://www.youtube.com/watch?v=KLlXCFG5TnA" }
+  ]
+}

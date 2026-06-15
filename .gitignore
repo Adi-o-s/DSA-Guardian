@@ -1,0 +1,29 @@
+/node_modules
+/.next
+/out
+*.log
+.DS_Store
+
+# Local database (regenerated at runtime)
+/data/guardian.db
+/data/guardian.db-*
+
+# Backups of the original local DB (snapshots; never commit)
+/backups/
+
+# Secrets / environment
+.env
+.env.local
+.env*.local
+
+# Exported local snapshot — contains the plaintext LEETCODE_SESSION cookie. Never commit.
+/guardian-export.json
+
+# Local tooling / build artifacts
+/.claude/
+/.vercel
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# Keep bundled datasets:
+#   data/striver-a2z.json, data/leetcode-meta.json, data/company.json

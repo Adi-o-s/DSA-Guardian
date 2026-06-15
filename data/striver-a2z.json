@@ -1,0 +1,4149 @@
+{
+  "name": "Striver A2Z DSA Sheet",
+  "source": "takeuforward.org (community snapshot)",
+  "generatedAt": "2026-06-13T05:12:10.915Z",
+  "totalProblems": 456,
+  "leetcodeLinked": 263,
+  "steps": [
+    {
+      "id": 1,
+      "title": "Basics",
+      "subtitle": "",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Things to know in C++ /Java /Python or any language",
+          "problems": [
+            {
+              "id": "0_user_input/_output",
+              "title": "User Input/ Output",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_data_types",
+              "title": "Data Types",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "2_if_else_statements",
+              "title": "If Else Statements",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/java-if-else-decision-making0924/0?category%5B%5D=Java&category%5B%5D=Java&difficulty%5B%5D=-2&page=1&query=category%5B%5DJavadifficulty%5B%5D-2page1category%5B%5DJava",
+              "yt": null
+            },
+            {
+              "id": "3_switch_statement",
+              "title": "Switch Statement",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/java-switch-case-statement3529/1",
+              "yt": null
+            },
+            {
+              "id": "4_what_are_arrays,_strings?",
+              "title": "What are arrays, strings?",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "5_for_loops",
+              "title": "For Loops",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "6_while_loops",
+              "title": "While Loops",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/while-loop-printtable-java/1",
+              "yt": null
+            },
+            {
+              "id": "7_functions_[pass_by_value_and_pass_by_reference]",
+              "title": "Functions [Pass by Value and Pass by Reference]",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "8_time_complexity_[learn_basics,_and_then_analyse_in_next_steps]",
+              "title": "Time Complexity [Learn Basics, and then analyse in next Steps]",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Build Up Logical Thinking",
+          "problems": [
+            {
+              "id": "0_do_all_these_patterns",
+              "title": "Do all these patterns",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Learn STL /Java Collection or similar thing in your language",
+          "problems": [
+            {
+              "id": "0_c++_stl",
+              "title": "C++ STL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=RRVYpIET_RU"
+            },
+            {
+              "id": "1_java_collections",
+              "title": "Java Collections",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Know Basic Maths",
+          "problems": [
+            {
+              "id": "0_count_digits",
+              "title": "Count Digits",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-digits5716/1",
+              "yt": null
+            },
+            {
+              "id": "1_reverse_a_number",
+              "title": "Reverse a Number",
+              "slug": "reverse-integer",
+              "leetcode": "https://leetcode.com/problems/reverse-integer/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-bits3556/1",
+              "yt": null
+            },
+            {
+              "id": "2_check_palindrome",
+              "title": "Check Palindrome",
+              "slug": "palindrome-number",
+              "leetcode": "https://leetcode.com/problems/palindrome-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/palindrome0746/1",
+              "yt": null
+            },
+            {
+              "id": "3_gcd_or_hcf",
+              "title": "GCD or HCF",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/lcm-and-gcd4516/1",
+              "yt": null
+            },
+            {
+              "id": "4_armstrong_number",
+              "title": "Armstrong Number",
+              "slug": "armstrong-number",
+              "leetcode": "https://leetcode.com/problems/armstrong-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/armstrong-numbers2727/1",
+              "yt": null
+            },
+            {
+              "id": "5_print_all_divisor",
+              "title": "Print all Divisor",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/sum-of-all-divisors-from-1-to-n4738/1",
+              "yt": null
+            },
+            {
+              "id": "6_check_for_prime",
+              "title": "Check for Prime",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Learn Basic Recursion",
+          "problems": [
+            {
+              "id": "0_understand_recursion_by_print_something_n_times",
+              "title": "Understand recursion by print something N times",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-1-to-n-without-using-loops-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=yVdKa8dnKiE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9"
+            },
+            {
+              "id": "1_print_name_n_times_using_recursion",
+              "title": "Print name N times using recursion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-gfg-n-times/1",
+              "yt": "https://www.youtube.com/watch?v=un6PLygfXrA&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9"
+            },
+            {
+              "id": "2_print_1_to_n_using_recursion",
+              "title": "Print 1 to N using recursion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-1-to-n-without-using-loops-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=un6PLygfXrA&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9"
+            },
+            {
+              "id": "3_print_n_to_1_using_recursion",
+              "title": "Print N to 1 using recursion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-n-to-1-without-loop/1",
+              "yt": "https://www.youtube.com/watch?v=un6PLygfXrA&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=2"
+            },
+            {
+              "id": "4_sum_of_first_n_numbers",
+              "title": "Sum of first N numbers",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1",
+              "yt": "https://www.youtube.com/watch?v=69ZCDFy-OUo&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=3"
+            },
+            {
+              "id": "5_factorial_of_n_numbers",
+              "title": "Factorial of N numbers",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3548/0?problemType=functional&difficulty[]=-1&page=1&query=problemTypefunctionaldifficulty[]-1page1",
+              "yt": "https://www.youtube.com/watch?v=69ZCDFy-OUo&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=3"
+            },
+            {
+              "id": "6_reverse_and_array",
+              "title": "Reverse and Array",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-an-array/0",
+              "yt": "https://www.youtube.com/watch?v=twuC1F6gLI8&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=4"
+            },
+            {
+              "id": "7_check_if_a_string_is_palindrome_or_not",
+              "title": "Check if a string is palindrome or not",
+              "slug": "valid-palindrome",
+              "leetcode": "https://leetcode.com/problems/valid-palindrome/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/palindrome-string0817/1",
+              "yt": "https://www.youtube.com/watch?v=twuC1F6gLI8&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=4"
+            },
+            {
+              "id": "8_fibonacci_number",
+              "title": "Fibonacci Number",
+              "slug": "fibonacci-number",
+              "leetcode": "https://leetcode.com/problems/fibonacci-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-first-n-fibonacci-numbers1002/1",
+              "yt": "https://www.youtube.com/watch?v=kvRjNm4rVBE&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=5"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Learn Basic Hashing",
+          "problems": [
+            {
+              "id": "0_count_frequencies_of_array_elements",
+              "title": "Count Frequencies of Array Elements",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/frequency-of-array-elements-1587115620/0",
+              "yt": null
+            },
+            {
+              "id": "1_find_the_highest/lowest_frequency_element",
+              "title": "Find the Highest/Lowest Frequency Element",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sorting Techniques",
+      "subtitle": "",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Sorting-I",
+          "problems": [
+            {
+              "id": "0_selection_sort",
+              "title": "Selection Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/selection-sort/1",
+              "yt": null
+            },
+            {
+              "id": "1_bubble_sort",
+              "title": "Bubble Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/bubble-sort/1",
+              "yt": null
+            },
+            {
+              "id": "2_insertion_sort",
+              "title": "Insertion Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/insertion-sort/0?category[]=Algorithms&page=1&query=category[]Algorithmspage1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Sorting-II",
+          "problems": [
+            {
+              "id": "0_merge_sort",
+              "title": "Merge Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/merge-sort/1",
+              "yt": null
+            },
+            {
+              "id": "1_recursive_bubble_sort",
+              "title": "Recursive Bubble Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/bubble-sort/1",
+              "yt": null
+            },
+            {
+              "id": "2_recursive_insertion_sort",
+              "title": "Recursive Insertion Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/insertion-sort/1",
+              "yt": null
+            },
+            {
+              "id": "3_quick_sort",
+              "title": "Quick Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/quick-sort/1",
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Arrays",
+      "subtitle": "Easy -> Medium -> Hard",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Easy",
+          "problems": [
+            {
+              "id": "0_largest_element_in_an_array",
+              "title": "Largest Element in an Array",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/largest-element-in-array4009/0",
+              "yt": null
+            },
+            {
+              "id": "1_second_largest_element_in_an_array_without_sorting",
+              "title": "Second Largest Element in an Array without sorting",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/second-largest3735/1",
+              "yt": null
+            },
+            {
+              "id": "2_check_if_the_array_is_sorted",
+              "title": "Check if the array is sorted",
+              "slug": "check-if-array-is-sorted-and-rotated",
+              "leetcode": "https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/#:~:text=Input%3A%20nums%20%3D%20%5B2%2C,no%20rotation)%20to%20make%20nums.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1",
+              "yt": null
+            },
+            {
+              "id": "3_remove_duplicates_from_sorted_array",
+              "title": "Remove duplicates from Sorted array",
+              "slug": "remove-duplicates-from-sorted-array",
+              "leetcode": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/#:~:text=Input%3A%20nums%20%3D%20%5B0%2C,%2C%203%2C%20and%204%20respectively.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/remove-duplicate-elements-from-sorted-array/1",
+              "yt": null
+            },
+            {
+              "id": "4_left_rotate_an_array_by_one_place",
+              "title": "Left Rotate an array by one place",
+              "slug": "rotate-array",
+              "leetcode": "https://leetcode.com/problems/rotate-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/quick-left-rotation3806/1",
+              "yt": null
+            },
+            {
+              "id": "5_left_rotate_an_array_by_d_places",
+              "title": "Left rotate an array by D places",
+              "slug": "rotate-array",
+              "leetcode": "https://leetcode.com/problems/rotate-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/reversal-algorithm5340/1",
+              "yt": null
+            },
+            {
+              "id": "6_move_zeros_to_end",
+              "title": "Move Zeros to end",
+              "slug": "move-zeroes",
+              "leetcode": "https://leetcode.com/problems/move-zeroes/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/move-all-zeroes-to-end-of-array0751/1",
+              "yt": null
+            },
+            {
+              "id": "7_linear_search",
+              "title": "Linear Search",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/who-will-win-1587115621/1",
+              "yt": null
+            },
+            {
+              "id": "8_find_the_union_and_intersection_of_two_sorted_arrays",
+              "title": "Find the Union and intersection of two sorted arrays",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1",
+              "yt": null
+            },
+            {
+              "id": "9_find_missing_number_in_an_array",
+              "title": "Find missing number in an array",
+              "slug": "missing-number",
+              "leetcode": "https://leetcode.com/problems/missing-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/missing-number4257/1",
+              "yt": "https://youtu.be/5nMGY4VUoRY"
+            },
+            {
+              "id": "10_maximum_consecutive_ones",
+              "title": "Maximum Consecutive Ones",
+              "slug": "max-consecutive-ones",
+              "leetcode": "https://leetcode.com/problems/max-consecutive-ones/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximize-number-of-1s0905/1",
+              "yt": "https://youtu.be/Mo33MjjMlyA"
+            },
+            {
+              "id": "11_subarray_with_given_sum",
+              "title": "Subarray with given sum",
+              "slug": "subarray-sum-equals-k",
+              "leetcode": "https://leetcode.com/problems/subarray-sum-equals-k/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1",
+              "yt": null
+            },
+            {
+              "id": "12_find_the_missing_number",
+              "title": "Find the Missing Number",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://www.geeksforgeeks.org/find-the-missing-number/",
+              "yt": null
+            },
+            {
+              "id": "13_find_the_number_that_appears_once,_and_other_numbers_twice.",
+              "title": "Find the number that appears once, and other numbers twice.",
+              "slug": "single-number",
+              "leetcode": "https://leetcode.com/problems/single-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/element-appearing-once2552/0?company[]=Qualcomm&company[]=Qualcomm&difficulty[]=1&page=1&query=company[]Qualcommdifficulty[]1page1company[]Qualcomm",
+              "yt": null
+            },
+            {
+              "id": "14_search_an_element_in_a_2d_matrix",
+              "title": "Search an element in a 2D matrix",
+              "slug": "search-a-2d-matrix",
+              "leetcode": "https://leetcode.com/problems/search-a-2d-matrix/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1",
+              "yt": "https://youtu.be/ZYpYur0znng"
+            },
+            {
+              "id": "15_find_the_row_with_maximum_number_of_1’s",
+              "title": "Find the row with maximum number of 1’s",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Medium",
+          "problems": [
+            {
+              "id": "0_2sum_problem",
+              "title": "2Sum Problem",
+              "slug": "two-sum",
+              "leetcode": "https://leetcode.com/problems/two-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-all-pairs-whose-sum-is-x5808/1",
+              "yt": "https://youtu.be/dRUpbt8vHpo"
+            },
+            {
+              "id": "1_sort_an_array_of_0’s_1’s_and_2’s",
+              "title": "Sort an array of 0’s 1’s and 2’s",
+              "slug": "sort-colors",
+              "leetcode": "https://leetcode.com/problems/sort-colors/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1",
+              "yt": "https://www.youtube.com/watch?v=oaVa-9wmpns&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=2"
+            },
+            {
+              "id": "2_majority_element_(>n/2_times)",
+              "title": "Majority Element (>n/2 times)",
+              "slug": "majority-element",
+              "leetcode": "https://leetcode.com/problems/majority-element/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=AoX3BPWNnoE&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=16"
+            },
+            {
+              "id": "3_kadane’s_algorithm,_maximum_subarray_sum",
+              "title": "Kadane’s Algorithm, maximum subarray sum",
+              "slug": "maximum-subarray",
+              "leetcode": "https://leetcode.com/problems/maximum-subarray/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/0?company[]=Visa&company[]=Visa&page=2&query=company[]Visapage2company[]Visa",
+              "yt": "https://www.youtube.com/watch?v=w_KEocd__20&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=5"
+            },
+            {
+              "id": "4_print_subarray_with_maximum_subarray_sum_(extended_version_of_above_problem)",
+              "title": "Print subarray with maximum subarray sum (extended version of above problem)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/max-sum-in-sub-arrays0824/0?category=",
+              "yt": null
+            },
+            {
+              "id": "5_stock_buy_and_sell",
+              "title": "Stock Buy and Sell",
+              "slug": "best-time-to-buy-and-sell-stock",
+              "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/stock-buy-and-sell2615/0?company[]=Intuit+&page=1&query=company[]Intuit+page1",
+              "yt": "https://www.youtube.com/watch?v=eMSfBgbiEjk&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=11"
+            },
+            {
+              "id": "6_rearrange_the_array_in_alternating_positive_and_negative_items",
+              "title": "Rearrange the array in alternating positive and negative items",
+              "slug": "rearrange-array-elements-by-sign",
+              "leetcode": "https://leetcode.com/problems/rearrange-array-elements-by-sign/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/array-of-alternate-ve-and-ve-nos1401/1",
+              "yt": null
+            },
+            {
+              "id": "7_next_permutation",
+              "title": "Next Permutation",
+              "slug": "next-permutation",
+              "leetcode": "https://leetcode.com/problems/next-permutation/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/next-permutation5226/1",
+              "yt": "https://www.youtube.com/watch?v=LuLCLgMElus&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=9"
+            },
+            {
+              "id": "8_leaders_in_an_array_problem",
+              "title": "Leaders in an Array problem",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "9_longest_consecutive_sequence_in_an_array",
+              "title": "Longest Consecutive Sequence in an Array",
+              "slug": "longest-consecutive-sequence",
+              "leetcode": "https://leetcode.com/problems/longest-consecutive-sequence/solution/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-consecutive-subsequence2449/0?problemType=functional&page=1&query=problemTypefunctionalpage1",
+              "yt": "https://youtu.be/qgizvmgeyUM"
+            },
+            {
+              "id": "10_set_matrix_zeros",
+              "title": "Set Matrix Zeros",
+              "slug": "set-matrix-zeroes",
+              "leetcode": "https://leetcode.com/problems/set-matrix-zeroes/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/make-zeroes4042/1",
+              "yt": "https://www.youtube.com/watch?v=M65xBewcqcI&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=7"
+            },
+            {
+              "id": "11_rotate_matrix_by_90_degrees",
+              "title": "Rotate Matrix by 90 degrees",
+              "slug": "rotate-image",
+              "leetcode": "https://leetcode.com/problems/rotate-image/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/rotate-by-90-degree-1587115621/1",
+              "yt": "https://youtu.be/Y72QeX0Efxw"
+            },
+            {
+              "id": "12_print_the_matrix_in_spiral_manner",
+              "title": "Print the matrix in spiral manner",
+              "slug": "spiral-matrix",
+              "leetcode": "https://leetcode.com/problems/spiral-matrix/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/cd61add036272faa69c6814e34aa7007d5a25aa6/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Hard",
+          "problems": [
+            {
+              "id": "0_pascal’s_triangle",
+              "title": "Pascal’s Triangle",
+              "slug": "pascals-triangle",
+              "leetcode": "https://leetcode.com/problems/pascals-triangle/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/pascal-triangle0652/1",
+              "yt": "https://www.youtube.com/watch?v=6FLvhQjZqvM&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=8"
+            },
+            {
+              "id": "1_majority_element_(n/3_times)",
+              "title": "Majority Element (n/3 times)",
+              "slug": "majority-element-ii",
+              "leetcode": "https://leetcode.com/problems/majority-element-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/majority-vote/1",
+              "yt": "https://www.youtube.com/watch?v=yDbkQd9t2ig&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=17"
+            },
+            {
+              "id": "2_3-sum_problem",
+              "title": "3-Sum Problem",
+              "slug": "3sum",
+              "leetcode": "https://leetcode.com/problems/3sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/3-sum-closest/1",
+              "yt": "https://www.youtube.com/watch?v=onLoX6Nhvmg&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=41"
+            },
+            {
+              "id": "3_4-sum_problem",
+              "title": "4-Sum Problem",
+              "slug": "4sum",
+              "leetcode": "https://leetcode.com/problems/4sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers1732/1",
+              "yt": "https://www.youtube.com/watch?v=4ggF3tXIAp0&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=21"
+            },
+            {
+              "id": "4_largest_subarray_with_0_sum",
+              "title": "Largest Subarray with 0 Sum",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1?category[]=Hash&category[]=Hash&company[]=Amazon&company[]=Amazon&page=1&query=category[]Hashcompany[]Amazonpage1company[]Amazoncategory[]Hash",
+              "yt": "https://www.youtube.com/watch?v=xmguZ6GbatA&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=23"
+            },
+            {
+              "id": "5_count_number_of_subarrays_with_given_xor_k",
+              "title": "Count number of subarrays with given xor K",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/subsets-with-xor-value2023/1",
+              "yt": "https://www.youtube.com/watch?v=lO9R5CaGRPY&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=25"
+            },
+            {
+              "id": "6_merge_overlapping_subintervals",
+              "title": "Merge Overlapping Subintervals",
+              "slug": "merge-intervals",
+              "leetcode": "https://leetcode.com/problems/merge-intervals/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/8a644e94faaa94968d8665ba9e0a80d1ae3e0a2d/1",
+              "yt": "https://www.youtube.com/watch?v=2JzRBPFYbKE&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=6"
+            },
+            {
+              "id": "7_merge_two_sorted_arrays_without_extra_space",
+              "title": "Merge two sorted arrays without extra space",
+              "slug": "merge-sorted-array",
+              "leetcode": "https://leetcode.com/problems/merge-sorted-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1?company[]=Synopsys&company[]=Synopsys&page=1&query=company[]Synopsyspage1company[]Synopsys",
+              "yt": "https://www.youtube.com/watch?v=hVl2b3bLzBw&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=4"
+            },
+            {
+              "id": "8_find_the_repeating_and_missing_number",
+              "title": "Find the repeating and missing number",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-missing-and-repeating2512/1",
+              "yt": "https://www.youtube.com/watch?v=5nMGY4VUoRY&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=3"
+            },
+            {
+              "id": "9_count_inversions",
+              "title": "Count Inversions",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=kQ1mJlwW-c0"
+            },
+            {
+              "id": "10_reverse_pairs",
+              "title": "Reverse Pairs",
+              "slug": "reverse-pairs",
+              "leetcode": "https://leetcode.com/problems/reverse-pairs/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/pairwise-swap-elements-of-a-linked-list-by-swapping-data/1",
+              "yt": "https://www.youtube.com/watch?v=S6rsAlj_iB4&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=19"
+            },
+            {
+              "id": "11_maximum_product_subarray",
+              "title": "Maximum Product Subarray",
+              "slug": "maximum-product-subarray",
+              "leetcode": "https://leetcode.com/problems/maximum-product-subarray/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/0?qa-rewrite=3336/print-all-valid-combinations-of-ip-address&show=3350",
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Binary Search",
+      "subtitle": "1D, 2D Arrays, Space Search",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Learning BS on 1D Arrays",
+          "problems": [
+            {
+              "id": "0_binary_search_to_find_x_in_sorted_array_",
+              "title": "Binary Search to find X in sorted array ",
+              "slug": "binary-search",
+              "leetcode": "https://leetcode.com/problems/binary-search/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/binary-search-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "1_implement_lower_bound",
+              "title": "Implement Lower Bound",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/floor-in-a-sorted-array-1587115620/1?track=DSASP-Searching&amp%3BbatchId=154",
+              "yt": null
+            },
+            {
+              "id": "2_implement_upper_bound",
+              "title": "Implement Upper Bound",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/ceil-the-floor2802/1",
+              "yt": null
+            },
+            {
+              "id": "3_search_insert_position",
+              "title": "Search Insert Position",
+              "slug": "search-insert-position",
+              "leetcode": "https://leetcode.com/problems/search-insert-position/#:~:text=Search%20Insert%20Position%20%2D%20LeetCode&text=Given%20a%20sorted%20array%20of,(log%20n)%20runtime%20complexity.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/search-insert-position-of-k-in-a-sorted-array/1",
+              "yt": null
+            },
+            {
+              "id": "4_check_if_input_array_is_sorted",
+              "title": "Check if Input array is sorted",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1",
+              "yt": null
+            },
+            {
+              "id": "5_find_the_first_or_last_occurrence_of_a_given_number_in_a_sorted_array_",
+              "title": "Find the first or last occurrence of a given number in a sorted array ",
+              "slug": "find-first-and-last-position-of-element-in-sorted-array",
+              "leetcode": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1",
+              "yt": null
+            },
+            {
+              "id": "6_count_occurrences_of_a_number_in_a_sorted_array_with_duplicates_",
+              "title": "Count occurrences of a number in a sorted array with duplicates ",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1",
+              "yt": null
+            },
+            {
+              "id": "7_find_peak_element",
+              "title": "Find peak element",
+              "slug": "find-peak-element",
+              "leetcode": "https://leetcode.com/problems/find-peak-element/#:~:text=Find%20Peak%20Element%20%2D%20LeetCode&text=A%20peak%20element%20is%20an,to%20any%20of%20the%20peaks.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/peak-element/1",
+              "yt": null
+            },
+            {
+              "id": "8_search_in_rotated_sorted_array_i",
+              "title": "Search in Rotated Sorted Array I",
+              "slug": "find-peak-element",
+              "leetcode": "https://leetcode.com/problems/find-peak-element/#:~:text=Find%20Peak%20Element%20%2D%20LeetCode&text=A%20peak%20element%20is%20an,to%20any%20of%20the%20peaks.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/peak-element/1",
+              "yt": "https://www.youtube.com/watch?v=r3pMQ8-Ad5s&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=64"
+            },
+            {
+              "id": "9_search_in_rotated_sorted_array_ii",
+              "title": "Search in Rotated Sorted Array II",
+              "slug": "search-in-rotated-sorted-array-ii",
+              "leetcode": "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/search-in-rotated-array-2/1",
+              "yt": null
+            },
+            {
+              "id": "10_find_minimum_in_rotated_sorted_array",
+              "title": "Find minimum in Rotated Sorted Array",
+              "slug": "find-minimum-in-rotated-sorted-array",
+              "leetcode": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-element-in-a-sorted-and-rotated-array3611/1",
+              "yt": null
+            },
+            {
+              "id": "11_single_element_in_a_sorted_array",
+              "title": "Single element in a Sorted Array",
+              "slug": "single-element-in-a-sorted-array",
+              "leetcode": "https://leetcode.com/problems/single-element-in-a-sorted-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-the-element-that-appears-once-in-sorted-array0624/1",
+              "yt": null
+            },
+            {
+              "id": "12_find_kth_element_of_two_sorted_arrays",
+              "title": "Find kth element of two sorted arrays",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1",
+              "yt": "https://www.youtube.com/watch?v=nv7F4PiLUzo&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=66"
+            },
+            {
+              "id": "13_find_out_how_many_times_has_an_array_been_rotated",
+              "title": "Find out how many times has an array been rotated",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/rotation4723/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Applying BS on 2D Arrays",
+          "problems": [
+            {
+              "id": "0_search_in_a_2d_matrix_",
+              "title": "Search in a 2D matrix ",
+              "slug": "search-a-2d-matrix",
+              "leetcode": "https://leetcode.com/problems/search-a-2d-matrix/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1",
+              "yt": "https://youtu.be/ZYpYur0znng"
+            },
+            {
+              "id": "1_find_peak_element_",
+              "title": "Find Peak Element ",
+              "slug": "find-a-peak-element-ii",
+              "leetcode": "https://leetcode.com/problems/find-a-peak-element-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/peak-element/1",
+              "yt": null
+            },
+            {
+              "id": "2_matrix_median",
+              "title": "Matrix Median",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1",
+              "yt": "https://www.youtube.com/watch?v=63fPPOdIr2c&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=62"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Final Answers by BS in Search Space",
+          "problems": [
+            {
+              "id": "0_find_square_root_of_a_number_in_log_n",
+              "title": "Find square root of a number in log n",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/square-root/0",
+              "yt": "https://www.youtube.com/watch?v=WjpswYrS2nY&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=62"
+            },
+            {
+              "id": "1_find_the_nth_root_of_a_number_using_binary_search",
+              "title": "Find the Nth root of a number using binary search",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1",
+              "yt": null
+            },
+            {
+              "id": "2_koko_eating_bananas",
+              "title": "Koko Eating Bananas",
+              "slug": "koko-eating-bananas",
+              "leetcode": "https://leetcode.com/problems/koko-eating-bananas/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/koko-eating-bananas/1",
+              "yt": null
+            },
+            {
+              "id": "3_minimum_days_to_make_m_bouquets",
+              "title": "Minimum days to make M bouquets",
+              "slug": "minimum-number-of-days-to-make-m-bouquets",
+              "leetcode": "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_find_the_smallest_divisor",
+              "title": "Find the smallest Divisor",
+              "slug": "find-the-smallest-divisor-given-a-threshold",
+              "leetcode": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "5_capacity_to_ship_packages_within_d_days",
+              "title": "Capacity to Ship Packages within D Days",
+              "slug": "capacity-to-ship-packages-within-d-days",
+              "leetcode": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/capacity-to-ship-packages-within-d-days/1",
+              "yt": null
+            },
+            {
+              "id": "6_median_of_two_sorted_arrays",
+              "title": "Median of two sorted arrays",
+              "slug": "median-of-two-sorted-arrays",
+              "leetcode": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/median-of-2-sorted-arrays-of-different-sizes/1",
+              "yt": "https://www.youtube.com/watch?v=NTop3VTjmxk&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=65"
+            },
+            {
+              "id": "7_aggressive_cows",
+              "title": "Aggressive Cows",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=wSOfYesTBRk&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=70"
+            },
+            {
+              "id": "8_book_allocation_problem",
+              "title": "Book Allocation Problem",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1",
+              "yt": "https://www.youtube.com/watch?v=gYmWHvRHu-s&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=69"
+            },
+            {
+              "id": "9_split_array_–_largest_sum",
+              "title": "Split array – Largest Sum",
+              "slug": "split-array-largest-sum",
+              "leetcode": "https://leetcode.com/problems/split-array-largest-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/largest-sum-subarray-of-size-at-least-k3121/1",
+              "yt": null
+            },
+            {
+              "id": "10_kth_missing_positive_number",
+              "title": "Kth Missing Positive Number",
+              "slug": "kth-missing-positive-number",
+              "leetcode": "https://leetcode.com/problems/kth-missing-positive-number/#:~:text=Given%20an%20array%20arr%20of,13%2C...%5D.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/k-th-missing-element3635/1",
+              "yt": null
+            },
+            {
+              "id": "11_minimize_max_distance_to_gas_station",
+              "title": "Minimize Max Distance to Gas Station",
+              "slug": "minimize-max-distance-to-gas-station",
+              "leetcode": "https://leetcode.com/problems/minimize-max-distance-to-gas-station/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "12_median_of_2_sorted_arrays",
+              "title": "Median of 2 sorted arrays",
+              "slug": "median-of-two-sorted-arrays",
+              "leetcode": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/median-of-2-sorted-arrays-of-different-sizes/1",
+              "yt": "https://www.youtube.com/watch?v=NTop3VTjmxk&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=65"
+            },
+            {
+              "id": "13_kth_element_of_2_sorted_arrays",
+              "title": "Kth element of 2 sorted arrays",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1",
+              "yt": "https://www.youtube.com/watch?v=nv7F4PiLUzo&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=66"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Strings",
+      "subtitle": "Basic and Medium",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Basic and Easy String Problems",
+          "problems": [
+            {
+              "id": "0_remove_outermost_paranthesis",
+              "title": "Remove outermost Paranthesis",
+              "slug": "remove-outermost-parentheses",
+              "leetcode": "https://leetcode.com/problems/remove-outermost-parentheses/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_reverse_words_in_a_given_string_/_palindrome_check_",
+              "title": "Reverse words in a given string / Palindrome Check ",
+              "slug": "reverse-words-in-a-string",
+              "leetcode": "https://leetcode.com/problems/reverse-words-in-a-string/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-words-in-a-given-string5459/1",
+              "yt": null
+            },
+            {
+              "id": "2_largest_odd_number_in_a_string",
+              "title": "Largest odd number in a string",
+              "slug": "largest-odd-number-in-string",
+              "leetcode": "https://leetcode.com/problems/largest-odd-number-in-string/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/largest-odd-number-in-string/1",
+              "yt": null
+            },
+            {
+              "id": "3_longest_common_prefix",
+              "title": "Longest Common Prefix",
+              "slug": "longest-common-prefix",
+              "leetcode": "https://leetcode.com/problems/longest-common-prefix/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-common-prefix-in-an-array5129/1",
+              "yt": null
+            },
+            {
+              "id": "4_isomorphic_string",
+              "title": "Isomorphic String",
+              "slug": "isomorphic-strings",
+              "leetcode": "https://leetcode.com/problems/isomorphic-strings/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/isomorphic-strings-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "5_check_whether_one_string_is_a_rotation_of_another_",
+              "title": "Check whether one string is a rotation of another ",
+              "slug": "rotate-string",
+              "leetcode": "https://leetcode.com/problems/rotate-string/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/check-if-strings-are-rotations-of-each-other-or-not-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "6_check_if_two_strings_are_anagram_of_each_other",
+              "title": "Check if two strings are anagram of each other",
+              "slug": "valid-anagram",
+              "leetcode": "https://leetcode.com/problems/valid-anagram/#:~:text=Given%20two%20strings%20s%20and,the%20original%20letters%20exactly%20once.&text=Constraints%3A,.length%20%3C%3D%205%20*%2010",
+              "gfg": "https://practice.geeksforgeeks.org/problems/anagram-1587115620/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Medium String Problems",
+          "problems": [
+            {
+              "id": "0_sort_characters_by_frequency",
+              "title": "Sort Characters by frequency",
+              "slug": "sort-characters-by-frequency",
+              "leetcode": "https://leetcode.com/problems/sort-characters-by-frequency/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/sorting-elements-of-an-array-by-frequency/0",
+              "yt": null
+            },
+            {
+              "id": "1_maximum_nesting_depth_of_paranthesis",
+              "title": "Maximum Nesting Depth of Paranthesis",
+              "slug": "maximum-nesting-depth-of-the-parentheses",
+              "leetcode": "https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-nesting-depth-of-the-parentheses/1",
+              "yt": null
+            },
+            {
+              "id": "2_roman_number_to_integer_and_vice_versa",
+              "title": "Roman Number to Integer and vice versa",
+              "slug": "roman-to-integer",
+              "leetcode": "https://leetcode.com/problems/roman-to-integer/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/roman-number-to-integer3201/1",
+              "yt": null
+            },
+            {
+              "id": "3_implement_atoi",
+              "title": "Implement Atoi",
+              "slug": "string-to-integer-atoi",
+              "leetcode": "https://leetcode.com/problems/string-to-integer-atoi/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/implement-atoi/1",
+              "yt": null
+            },
+            {
+              "id": "4_count_number_of_substrings",
+              "title": "Count Number of Substrings",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-number-of-substrings4528/1",
+              "yt": null
+            },
+            {
+              "id": "5_longest_palindromic_substring[do_it_without_dp]",
+              "title": "Longest Palindromic Substring[Do it without DP]",
+              "slug": "longest-palindromic-substring",
+              "leetcode": "https://leetcode.com/problems/longest-palindromic-substring/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "6_sum_of_beauty_of_all_substring",
+              "title": "Sum of Beauty of all substring",
+              "slug": "sum-of-beauty-of-all-substrings",
+              "leetcode": "https://leetcode.com/problems/sum-of-beauty-of-all-substrings/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/sum-of-beauty-of-all-substrings-1662962118/1",
+              "yt": null
+            },
+            {
+              "id": "7_reverse_every_word_in_a_string",
+              "title": "Reverse Every Word in A String",
+              "slug": "reverse-words-in-a-string",
+              "leetcode": "https://leetcode.com/problems/reverse-words-in-a-string/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-words-in-a-given-string5459/1",
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Linked List",
+      "subtitle": "Single/Double LL, Medium, Hard",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Learn 1D Linked List",
+          "problems": [
+            {
+              "id": "0_introduction_to_linkedlist,_learn_about_struct,_and_how_is_node_represented_",
+              "title": "Introduction to LinkedList, learn about struct, and how is node represented ",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_inserting_a_node_in_linkedlist",
+              "title": "Inserting a node in LinkedList",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/linked-list-insertion-1587115620/0",
+              "yt": null
+            },
+            {
+              "id": "2_deleting_a_node_in_linkedlist",
+              "title": "Deleting a node in LinkedList",
+              "slug": "delete-node-in-a-linked-list",
+              "leetcode": "https://leetcode.com/problems/delete-node-in-a-linked-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1",
+              "yt": null
+            },
+            {
+              "id": "3_find_the_length_of_the_linkedlist_[learn_traversal]",
+              "title": "Find the length of the linkedlist [Learn traversal]",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_search_an_element_in_the_linkedlist",
+              "title": "Search an element in the linkedList",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Learn Doubly Linked List",
+          "problems": [
+            {
+              "id": "0_introduction_to_dll,_learn_about_struct,_and_how_is_node_represented_",
+              "title": "Introduction to DLL, learn about struct, and how is node represented ",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_insert_a_node_in_dll",
+              "title": "Insert a node in DLL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1",
+              "yt": null
+            },
+            {
+              "id": "2_delete_a_node_in_dll",
+              "title": "Delete a node in DLL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/closest-number5728/1",
+              "yt": null
+            },
+            {
+              "id": "3_reverse_a_dll",
+              "title": "Reverse a DLL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-a-doubly-linked-list/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Medium Problems on Linked List",
+          "problems": [
+            {
+              "id": "0_middle_of_a_linkedlist_[tortoise_hare_method]",
+              "title": "Middle of a LinkedList [Tortoise Hare Method]",
+              "slug": "middle-of-the-linked-list",
+              "leetcode": "https://leetcode.com/problems/middle-of-the-linked-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/finding-middle-element-in-a-linked-list/1",
+              "yt": "https://www.youtube.com/watch?v=sGdwSH8RK-o&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=28"
+            },
+            {
+              "id": "1_reverse_a_linkedlist_[iterative]",
+              "title": "Reverse a LinkedList [Iterative]",
+              "slug": "reverse-linked-list",
+              "leetcode": "https://leetcode.com/problems/reverse-linked-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1",
+              "yt": "https://www.youtube.com/watch?v=iRtLEoL-r-g&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=27"
+            },
+            {
+              "id": "2_reverse_a_ll_[recursive]",
+              "title": "Reverse a LL [Recursive]",
+              "slug": "reverse-linked-list",
+              "leetcode": "https://leetcode.com/problems/reverse-linked-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1",
+              "yt": "https://www.youtube.com/watch?v=iRtLEoL-r-g&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=27"
+            },
+            {
+              "id": "3_detect_a_loop_in_ll",
+              "title": "Detect a loop in LL",
+              "slug": "linked-list-cycle",
+              "leetcode": "https://leetcode.com/problems/linked-list-cycle/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1?page=1&category[]=Linked+List&sortBy=submissions",
+              "yt": "https://www.youtube.com/watch?v=354J83hX7RI&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=34"
+            },
+            {
+              "id": "4_find_the_starting_point_in_ll",
+              "title": "Find the starting point in LL",
+              "slug": "linked-list-cycle-ii",
+              "leetcode": "https://leetcode.com/problems/linked-list-cycle-ii/",
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=QfbOhn0WZ88&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=37"
+            },
+            {
+              "id": "5_length_of_loop_in_ll",
+              "title": "Length of Loop in LL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-length-of-loop/1",
+              "yt": null
+            },
+            {
+              "id": "6_check_if_ll_is_palindrome_or_not",
+              "title": "Check if LL is palindrome or not",
+              "slug": "palindrome-linked-list",
+              "leetcode": "https://leetcode.com/problems/palindrome-linked-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1",
+              "yt": "https://www.youtube.com/watch?v=-DtNInqFUXs&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=36"
+            },
+            {
+              "id": "7_segrregate_odd_and_even_nodes_in_ll",
+              "title": "Segrregate odd and even nodes in LL",
+              "slug": "odd-even-linked-list",
+              "leetcode": "https://leetcode.com/problems/odd-even-linked-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/segregate-even-and-odd-nodes-in-a-linked-list5035/1",
+              "yt": null
+            },
+            {
+              "id": "8_remove_nth_node_from_the_back_of_the_ll",
+              "title": "Remove Nth node from the back of the LL",
+              "slug": "remove-nth-node-from-end-of-list",
+              "leetcode": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1?page=1&category[]=Linked+List&sortBy=submissions",
+              "yt": "https://www.youtube.com/watch?v=Lhu3MsXZy-Q&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=30"
+            },
+            {
+              "id": "9_delete_the_middle_node_of_ll",
+              "title": "Delete the middle node of LL",
+              "slug": "delete-the-middle-node-of-a-linked-list",
+              "leetcode": "https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/#:~:text=You%20are%20given%20the%20head,than%20or%20equal%20to%20x%20.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/delete-middle-of-linked-list/1",
+              "yt": null
+            },
+            {
+              "id": "10_sort_ll",
+              "title": "Sort LL",
+              "slug": "sort-list",
+              "leetcode": "https://leetcode.com/problems/sort-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/linked-list-that-is-sorted-alternatingly/1",
+              "yt": null
+            },
+            {
+              "id": "11_sort_a_ll_of_0’s_1’s_and_2’s_by_changing_links",
+              "title": "Sort a LL of 0’s 1’s and 2’s by changing links",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/given-a-linked-list-of-0s-1s-and-2s-sort-it/1",
+              "yt": null
+            },
+            {
+              "id": "12_find_the_intersection_point_of_y_ll",
+              "title": "Find the intersection point of Y LL",
+              "slug": "intersection-of-two-linked-lists",
+              "leetcode": "https://leetcode.com/problems/intersection-of-two-linked-lists/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/intersection-of-two-linked-list/1",
+              "yt": "https://www.youtube.com/watch?v=u4FWXfgS8jw&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=33"
+            },
+            {
+              "id": "13_add_1_to_a_number_represented_by_ll",
+              "title": "Add 1 to a number represented by LL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1",
+              "yt": null
+            },
+            {
+              "id": "14_add_2_numbers_in_ll",
+              "title": "Add 2 numbers in LL",
+              "slug": "add-two-numbers",
+              "leetcode": "https://leetcode.com/problems/add-two-numbers/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1",
+              "yt": "https://www.youtube.com/watch?v=LBVsXSMOIk4&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=32"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Medium Problems on Doubly Linked List",
+          "problems": [
+            {
+              "id": "0_delete_all_occurrences_of_a_key_in_dll",
+              "title": "Delete all occurrences of a key in DLL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_find_pairs_with_given_sum_in_dll",
+              "title": "Find pairs with given sum in DLL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-pairs-with-given-sum-in-doubly-linked-list/1",
+              "yt": null
+            },
+            {
+              "id": "2_remove_duplicates_from_sorted_dll",
+              "title": "Remove duplicates from sorted DLL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Hard Problems on Linked List",
+          "problems": [
+            {
+              "id": "0_reverse_ll_in_group_of_given_size_k",
+              "title": "Reverse LL in group of given size K",
+              "slug": "reverse-nodes-in-k-group",
+              "leetcode": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-pairs-with-given-sum-in-doubly-linked-list/1",
+              "yt": "https://www.youtube.com/watch?v=Of0HPkk3JgI&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=34"
+            },
+            {
+              "id": "1_rotate_a_ll",
+              "title": "Rotate a LL",
+              "slug": "rotate-list",
+              "leetcode": "https://leetcode.com/problems/rotate-list/description/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/rotate-a-linked-list/1",
+              "yt": "https://www.youtube.com/watch?v=9VPm6nEbVPA&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=39"
+            },
+            {
+              "id": "2_flattening_of_ll",
+              "title": "Flattening of LL",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1",
+              "yt": "https://www.youtube.com/watch?v=ysytSSXpAI0&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=38"
+            },
+            {
+              "id": "3_clone_a_linked_list_with_random_and_next_pointer",
+              "title": "Clone a Linked List with random and next pointer",
+              "slug": "copy-list-with-random-pointer",
+              "leetcode": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/1",
+              "yt": "https://www.youtube.com/watch?v=VNf6VynfpdM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Recursion",
+      "subtitle": "Pattern Wise",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Get a Strong Hold",
+          "problems": [
+            {
+              "id": "0_recursive_implementation_of_atoi()",
+              "title": "Recursive Implementation of atoi()",
+              "slug": "string-to-integer-atoi",
+              "leetcode": "https://leetcode.com/problems/string-to-integer-atoi/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/implement-atoi/1",
+              "yt": null
+            },
+            {
+              "id": "1_pow(x,_n)",
+              "title": "Pow(x, n)",
+              "slug": "powx-n",
+              "leetcode": "https://leetcode.com/problems/powx-n/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/power-of-numbers-1587115620/1",
+              "yt": "https://youtu.be/l0YC3876qxg"
+            },
+            {
+              "id": "2_count_good_numbers",
+              "title": "Count Good numbers",
+              "slug": "count-good-numbers",
+              "leetcode": "https://leetcode.com/problems/count-good-numbers/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/good-numbers4629/1",
+              "yt": null
+            },
+            {
+              "id": "3_sort_a_stack_using_recursion",
+              "title": "Sort a stack using recursion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/sort-a-stack/1",
+              "yt": null
+            },
+            {
+              "id": "4_reverse_a_stack_using_recursion",
+              "title": "Reverse a stack using recursion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-a-stack/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Subsequences Pattern",
+          "problems": [
+            {
+              "id": "0_generate_all_binary_strings",
+              "title": "Generate all binary strings",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://www.geeksforgeeks.org/generate-binary-strings-without-consecutive-1s/",
+              "yt": null
+            },
+            {
+              "id": "1_generate_paranthesis",
+              "title": "Generate Paranthesis",
+              "slug": "generate-parentheses",
+              "leetcode": "https://leetcode.com/problems/generate-parentheses/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/generate-all-possible-parentheses/1",
+              "yt": null
+            },
+            {
+              "id": "2_print_all_subsequences/power_set",
+              "title": "Print all subsequences/Power Set",
+              "slug": "subsets",
+              "leetcode": "https://leetcode.com/problems/subsets/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/power-set4302/1",
+              "yt": "https://youtu.be/b7AYbpM5YrE"
+            },
+            {
+              "id": "3_learn_all_patterns_of_subsequences_(theory)",
+              "title": "Learn All Patterns of Subsequences (Theory)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=eQCS_v3bw0Q&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=7"
+            },
+            {
+              "id": "4_count_all_subsequences_with_sum_k",
+              "title": "Count all subsequences with sum K",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/perfect-sum-problem5633/1",
+              "yt": null
+            },
+            {
+              "id": "5_check_if_there_exists_a_subsequence_with_sum_k",
+              "title": "Check if there exists a subsequence with sum K",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "6_combination_sum",
+              "title": "Combination Sum",
+              "slug": "combination-sum",
+              "leetcode": "https://leetcode.com/problems/combination-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/combination-sum-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=OyZFFqQtu98&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=49"
+            },
+            {
+              "id": "7_combination_sum-ii",
+              "title": "Combination Sum-II",
+              "slug": "combination-sum-ii",
+              "leetcode": "https://leetcode.com/problems/combination-sum-ii/",
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=G1fRTGRxXU8&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=50"
+            },
+            {
+              "id": "8_combination_sum_–_iii",
+              "title": "Combination Sum – III",
+              "slug": "combination-sum-iii",
+              "leetcode": "https://leetcode.com/problems/combination-sum-iii/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "9_subset_sum-i",
+              "title": "Subset Sum-I",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/subset-sums2234/1",
+              "yt": "https://www.youtube.com/watch?v=rYkfBRtMJr8&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=52"
+            },
+            {
+              "id": "10_subset_sum-ii",
+              "title": "Subset Sum-II",
+              "slug": "subsets-ii",
+              "leetcode": "https://leetcode.com/problems/subsets-ii/",
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=RIn3gOkbhQE&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=53"
+            },
+            {
+              "id": "11_letter_combinations_of_a_phone_number",
+              "title": "Letter Combinations of a Phone number",
+              "slug": "letter-combinations-of-a-phone-number",
+              "leetcode": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/possible-words-from-phone-digits-1587115620/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Try out all Combos /Hard",
+          "problems": [
+            {
+              "id": "0_palindrome_partitioning",
+              "title": "Palindrome Partitioning",
+              "slug": "palindrome-partitioning",
+              "leetcode": "https://leetcode.com/problems/palindrome-partitioning/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1",
+              "yt": "https://www.youtube.com/watch?v=WBgsABoClE0&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=51"
+            },
+            {
+              "id": "1_word_search",
+              "title": "Word Search",
+              "slug": "word-search",
+              "leetcode": "https://leetcode.com/problems/word-search/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/word-search/1",
+              "yt": null
+            },
+            {
+              "id": "2_n_queen",
+              "title": "N Queen",
+              "slug": "n-queens",
+              "leetcode": "https://leetcode.com/problems/n-queens/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/n-queen-problem0315/1",
+              "yt": "https://www.youtube.com/watch?v=i05Ju7AftcM&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=57"
+            },
+            {
+              "id": "3_rat_in_a_maze",
+              "title": "Rat in a Maze",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1",
+              "yt": "https://www.youtube.com/watch?v=bLGZhJlt4y0&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=60"
+            },
+            {
+              "id": "4_word_break",
+              "title": "Word Break",
+              "slug": "word-break",
+              "leetcode": "https://leetcode.com/problems/word-break/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/word-break-part-23249/1",
+              "yt": null
+            },
+            {
+              "id": "5_m_coloring_problem",
+              "title": "M Coloring Problem",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=wuVwUK25Rfc&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=59"
+            },
+            {
+              "id": "6_sudoko_solver",
+              "title": "Sudoko Solver",
+              "slug": "sudoku-solver",
+              "leetcode": "https://leetcode.com/problems/sudoku-solver/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/solve-the-sudoku-1587115621/1",
+              "yt": "https://www.youtube.com/watch?v=FWAIf_EVUKE&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=58"
+            },
+            {
+              "id": "7_expression_add_operators",
+              "title": "Expression Add Operators",
+              "slug": "expression-add-operators",
+              "leetcode": "https://leetcode.com/problems/expression-add-operators/",
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Bit Manipulation",
+      "subtitle": "Concepts & Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Learn Bit Manipulation",
+          "problems": [
+            {
+              "id": "0_introduction_to_bit_manipulation_[theory]",
+              "title": "Introduction to Bit Manipulation [Theory]",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_check_if_the_i-th_bit_is_set_or_not",
+              "title": "Check if the i-th bit is set or not",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/check-whether-k-th-bit-is-set-or-not-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "2_check_if_a_number_is_odd_or_not",
+              "title": "Check if a number is odd or not",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/odd-or-even3618/1",
+              "yt": null
+            },
+            {
+              "id": "3_check_if_a_number_is_power_of_2_or_not",
+              "title": "Check if a number is power of 2 or not",
+              "slug": "power-of-two",
+              "leetcode": "https://leetcode.com/problems/power-of-two/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/power-of-2-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "4_count_the_number_of_set_bits",
+              "title": "Count the number of set bits",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-total-set-bits-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "5_set/unset_the_rightmost_unset_bit",
+              "title": "Set/Unset the rightmost unset bit",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/set-the-rightmost-unset-bit4436/1",
+              "yt": null
+            },
+            {
+              "id": "6_swap_two_numbers",
+              "title": "Swap two numbers",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/swap-two-numbers3844/1",
+              "yt": null
+            },
+            {
+              "id": "7_divide_two_integers_without_using_multiplication,_division_and_mod_operator",
+              "title": "Divide two integers without using multiplication, division and mod operator",
+              "slug": "divide-two-integers",
+              "leetcode": "https://leetcode.com/problems/divide-two-integers/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/division-without-using-multiplication-division-and-mod-operator/0",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Interview Problems",
+          "problems": [
+            {
+              "id": "0_count_number_of_bits_to_be_flipped_to_convert_a_to_b",
+              "title": "Count number of bits to be flipped to convert A to B",
+              "slug": "minimum-bit-flips-to-convert-number",
+              "leetcode": "https://leetcode.com/problems/minimum-bit-flips-to-convert-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/bit-difference-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "1_find_the_number_that_appears_odd_number_of_times",
+              "title": "Find the number that appears odd number of times",
+              "slug": "single-number",
+              "leetcode": "https://leetcode.com/problems/single-number/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-the-odd-occurence4820/1",
+              "yt": null
+            },
+            {
+              "id": "2_power_set",
+              "title": "Power Set",
+              "slug": "subsets",
+              "leetcode": "https://leetcode.com/problems/subsets/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/power-set4302/1",
+              "yt": "https://www.youtube.com/watch?v=b7AYbpM5YrE&t=232s"
+            },
+            {
+              "id": "3_find_xor_of_numbers_from_l_to_r",
+              "title": "Find xor of numbers from L to R",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_find_the_two_numbers_appearing_odd_number_of_times",
+              "title": "Find the two numbers appearing odd number of times",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/two-numbers-with-odd-occurrences5846/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Advanced Maths",
+          "problems": [
+            {
+              "id": "0_print_prime_factors_of_a_number",
+              "title": "Print Prime Factors of a Number",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/prime-factors5052/1",
+              "yt": null
+            },
+            {
+              "id": "1_all_divisors_of_a_number",
+              "title": "All Divisors of a Number",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "2_sieve_of_eratosthenes",
+              "title": "Sieve of Eratosthenes",
+              "slug": "count-primes",
+              "leetcode": "https://leetcode.com/problems/count-primes/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/sieve-of-eratosthenes5242/1",
+              "yt": null
+            },
+            {
+              "id": "3_find_prime_factorisation_of_a_number_using_sieve",
+              "title": "Find Prime Factorisation of a Number using Sieve",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_power(n,_x)",
+              "title": "Power(n, x)",
+              "slug": "powx-n",
+              "leetcode": "https://leetcode.com/problems/powx-n/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/power-of-numbers-1587115620/1",
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Stack & Queue",
+      "subtitle": "Pre-In-Post Fix, Monotonic Stack",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Learning",
+          "problems": [
+            {
+              "id": "0_implement_stack_using_arrays",
+              "title": "Implement Stack using Arrays",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/implement-stack-using-array/1",
+              "yt": "https://www.youtube.com/watch?v=GYptUgnIM_I&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=68"
+            },
+            {
+              "id": "1_implement_queue_using_arrays",
+              "title": "Implement Queue using Arrays",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/implement-queue-using-array/1",
+              "yt": "https://www.youtube.com/watch?v=M6GnoUDpqEE&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=72"
+            },
+            {
+              "id": "2_implement_stack_using_queue",
+              "title": "Implement Stack using Queue",
+              "slug": "implement-stack-using-queues",
+              "leetcode": "https://leetcode.com/problems/implement-stack-using-queues/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/stack-using-two-queues/1",
+              "yt": "https://www.youtube.com/watch?v=jDZQKzEtbYQ&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=74"
+            },
+            {
+              "id": "3_implement_queue_using_stack",
+              "title": "Implement Queue using Stack",
+              "slug": "implement-queue-using-stacks",
+              "leetcode": "https://leetcode.com/problems/implement-queue-using-stacks/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/queue-using-stack/1",
+              "yt": "https://www.youtube.com/watch?v=3Et9MrMc02A&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=75"
+            },
+            {
+              "id": "4_implement_stack_using_linkedlist",
+              "title": "Implement stack using Linkedlist",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/implement-stack-using-linked-list/1",
+              "yt": null
+            },
+            {
+              "id": "5_implement_queue_using_linkedlist",
+              "title": "Implement queue using Linkedlist",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/implement-queue-using-linked-list/1",
+              "yt": null
+            },
+            {
+              "id": "6_check_for_balanced_paranthesis",
+              "title": "Check for balanced paranthesis",
+              "slug": "valid-parentheses",
+              "leetcode": "https://leetcode.com/problems/valid-parentheses/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/parenthesis-checker2744/1",
+              "yt": "https://www.youtube.com/watch?v=wkDfsKijrZ8&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=74"
+            },
+            {
+              "id": "7_implement_min_stack",
+              "title": "Implement Min Stack",
+              "slug": "min-stack",
+              "leetcode": "https://leetcode.com/problems/min-stack/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/get-minimum-element-from-stack/1",
+              "yt": "https://youtu.be/V09NfaGf2ao"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Prefix, Infix, Postfix Conversion Problems",
+          "problems": [
+            {
+              "id": "0_infix_to_postfix_conversion_using_stack",
+              "title": "Infix to Postfix Conversion using Stack",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/infix-to-postfix-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "1_prefix_to_infix_conversion",
+              "title": "Prefix to Infix Conversion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "2_prefix_to_postfix_conversion",
+              "title": "Prefix to Postfix Conversion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "3_postfix_to_prefix_conversion",
+              "title": "Postfix to Prefix Conversion",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_postfix_to_infix",
+              "title": "Postfix to Infix",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "5_convert_infix_to_prefix_notation",
+              "title": "Convert Infix To Prefix Notation",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/infix-to-postfix-1587115620/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Monotonic Stack /Queue Problem [Imp]",
+          "problems": [
+            {
+              "id": "0_next_greater_element",
+              "title": "Next Greater Element",
+              "slug": "next-greater-element-i",
+              "leetcode": "https://leetcode.com/problems/next-greater-element-i/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/next-larger-element-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=Du881K7Jtk8&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=75"
+            },
+            {
+              "id": "1_next_greater_element_-_ii",
+              "title": "Next Greater Element - II",
+              "slug": "next-greater-element-ii",
+              "leetcode": "https://leetcode.com/problems/next-greater-element-ii/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "2_next_smaller_element",
+              "title": "Next Smaller Element",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/immediate-smaller-element1142/1",
+              "yt": null
+            },
+            {
+              "id": "3_number_of_nges_to_the_right",
+              "title": "Number of NGEs to the right",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_trapping_rainwater",
+              "title": "Trapping Rainwater",
+              "slug": "trapping-rain-water",
+              "leetcode": "https://leetcode.com/problems/trapping-rain-water/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1",
+              "yt": "https://www.youtube.com/watch?v=m18Hntz4go8&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=42"
+            },
+            {
+              "id": "5_sum_of_subarray_minimum",
+              "title": "Sum of subarray minimum",
+              "slug": "sum-of-subarray-minimums",
+              "leetcode": "https://leetcode.com/problems/sum-of-subarray-minimums/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "6_stock_span_problem",
+              "title": "Stock span problem",
+              "slug": "online-stock-span",
+              "leetcode": "https://leetcode.com/problems/online-stock-span/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/stock-span-problem-1587115621/1",
+              "yt": null
+            },
+            {
+              "id": "7_asteroid_collision",
+              "title": "Asteroid Collision",
+              "slug": "asteroid-collision",
+              "leetcode": "https://leetcode.com/problems/asteroid-collision/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "8_sum_of_subarray_ranges",
+              "title": "Sum of subarray ranges",
+              "slug": "sum-of-subarray-ranges",
+              "leetcode": "https://leetcode.com/problems/sum-of-subarray-ranges/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "9_remove_k_digits",
+              "title": "Remove k Digits",
+              "slug": "remove-k-digits",
+              "leetcode": "https://leetcode.com/problems/remove-k-digits/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/remove-k-digits/1",
+              "yt": null
+            },
+            {
+              "id": "10_largest_rectangle_in_a_histogram",
+              "title": "Largest rectangle in a histogram",
+              "slug": "largest-rectangle-in-histogram",
+              "leetcode": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=X0X6G-eWgQ8&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=81"
+            },
+            {
+              "id": "11_maximal_rectangles",
+              "title": "Maximal Rectangles",
+              "slug": "maximal-rectangle",
+              "leetcode": "https://leetcode.com/problems/maximal-rectangle/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/max-rectangle/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Implementation Problems",
+          "problems": [
+            {
+              "id": "0_sliding_window_maximum",
+              "title": "Sliding Window maximum",
+              "slug": "sliding-window-maximum",
+              "leetcode": "https://leetcode.com/problems/sliding-window-maximum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1",
+              "yt": "https://www.youtube.com/watch?v=CZQGRp93K4k&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=83"
+            },
+            {
+              "id": "1_stock_span_problem",
+              "title": "Stock Span Problem",
+              "slug": "online-stock-span",
+              "leetcode": "https://leetcode.com/problems/online-stock-span/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/stock-span-problem-1587115621/1",
+              "yt": null
+            },
+            {
+              "id": "2_the_celebrity_problem",
+              "title": "The Celebrity Problem",
+              "slug": null,
+              "leetcode": "https://leetcode.com/accounts/login/?next=/problems/find-the-celebrity/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/the-celebrity-problem/1",
+              "yt": null
+            },
+            {
+              "id": "3_rotten_oranges",
+              "title": "Rotten Oranges",
+              "slug": "rotting-oranges",
+              "leetcode": "https://leetcode.com/problems/rotting-oranges/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/rotten-oranges2536/1",
+              "yt": "https://www.youtube.com/watch?v=yf3oUhkvqA0"
+            },
+            {
+              "id": "4_lru_cache_(important)",
+              "title": "LRU cache (IMPORTANT)",
+              "slug": "lru-cache",
+              "leetcode": "https://leetcode.com/problems/lru-cache/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/lru-cache/1",
+              "yt": "https://www.youtube.com/watch?v=xDEuM5qa0zg&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=77"
+            },
+            {
+              "id": "5_lfu_cache",
+              "title": "LFU cache",
+              "slug": "lfu-cache",
+              "leetcode": "https://leetcode.com/problems/lfu-cache/",
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=0PSB9y8ehbk&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=79"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Two Pointers",
+      "subtitle": "Combined Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Medium Problems",
+          "problems": [
+            {
+              "id": "0_longest_substring_without_repeating_characters",
+              "title": "Longest Substring Without Repeating Characters",
+              "slug": "longest-substring-without-repeating-characters",
+              "leetcode": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/length-of-the-longest-substring3036/1",
+              "yt": "https://www.youtube.com/watch?v=qtVh-XEpsJo&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=26"
+            },
+            {
+              "id": "1_max_consecutive_ones_iii",
+              "title": "Max Consecutive Ones III",
+              "slug": "max-consecutive-ones-iii",
+              "leetcode": "https://leetcode.com/problems/max-consecutive-ones-iii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-consecutive-ones/1",
+              "yt": null
+            },
+            {
+              "id": "2_fruit_into_baskets",
+              "title": "Fruit Into Baskets",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "3_longest_repeating_character_replacement",
+              "title": "Longest repeating character replacement",
+              "slug": "longest-repeating-character-replacement",
+              "leetcode": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_binary_subarray_with_sum",
+              "title": "Binary subarray with sum",
+              "slug": "binary-subarrays-with-sum",
+              "leetcode": "https://leetcode.com/problems/binary-subarrays-with-sum/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "5_count_number_of_nice_subarrays",
+              "title": "Count number of nice subarrays",
+              "slug": "count-number-of-nice-subarrays",
+              "leetcode": "https://leetcode.com/problems/count-number-of-nice-subarrays/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-subarray-with-k-odds/1",
+              "yt": null
+            },
+            {
+              "id": "6_number_of_substring_containing_all_three_characters",
+              "title": "Number of substring containing all three characters",
+              "slug": "number-of-substrings-containing-all-three-characters",
+              "leetcode": "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-substring/1",
+              "yt": null
+            },
+            {
+              "id": "7_maximum_point_you_can_obtain_from_cards",
+              "title": "Maximum point you can obtain from cards",
+              "slug": "maximum-points-you-can-obtain-from-cards",
+              "leetcode": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Hard Problems",
+          "problems": [
+            {
+              "id": "0_longest_substring_with_at_most_k_distinct_characters",
+              "title": "Longest Substring with At Most K Distinct Characters",
+              "slug": "longest-substring-with-at-most-k-distinct-characters",
+              "leetcode": "https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1",
+              "yt": null
+            },
+            {
+              "id": "1_subarray_with_k_different_integers",
+              "title": "Subarray with k different integers",
+              "slug": "subarrays-with-k-different-integers",
+              "leetcode": "https://leetcode.com/problems/subarrays-with-k-different-integers/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "2_minimum_window_substring",
+              "title": "Minimum Window Substring",
+              "slug": "minimum-window-substring",
+              "leetcode": "https://leetcode.com/problems/minimum-window-substring/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string-1587115621/1",
+              "yt": null
+            },
+            {
+              "id": "3_minimum_window_subsequence",
+              "title": "Minimum Window Subsequence",
+              "slug": "minimum-window-subsequence",
+              "leetcode": "https://leetcode.com/problems/minimum-window-subsequence/",
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Heaps",
+      "subtitle": "Learning, Medium, Hard Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Learning",
+          "problems": [
+            {
+              "id": "0_introduction_to_priority_queues_using_binary_heaps",
+              "title": "Introduction to Priority Queues using Binary Heaps",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_min_heap_and_max_heap_implementation",
+              "title": "Min Heap and Max Heap Implementation",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/operations-on-binary-min-heap/1",
+              "yt": null
+            },
+            {
+              "id": "2_check_if_an_array_represents_a_min-heap_or_not",
+              "title": "Check if an array represents a min-heap or not",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/does-array-represent-heap4345/1",
+              "yt": null
+            },
+            {
+              "id": "3_convert_min_heap_to_max_heap",
+              "title": "Convert min Heap to max Heap",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Medium Problems",
+          "problems": [
+            {
+              "id": "0_kth_largest_element_in_an_array_[use_priority_queue]",
+              "title": "Kth largest element in an array [use priority queue]",
+              "slug": "kth-largest-element-in-an-array",
+              "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/k-largest-elements3736/1",
+              "yt": null
+            },
+            {
+              "id": "1_kth_smallest_element_in_an_array_[use_priority_queue]",
+              "title": "Kth smallest element in an array [use priority queue]",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1",
+              "yt": null
+            },
+            {
+              "id": "2_sort_k_sorted_array",
+              "title": "Sort K sorted array",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/merge-k-sorted-arrays/1",
+              "yt": null
+            },
+            {
+              "id": "3_merge_m_sorted_lists",
+              "title": "Merge M sorted Lists",
+              "slug": "merge-k-sorted-lists",
+              "leetcode": "https://leetcode.com/problems/merge-k-sorted-lists/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/merge-k-sorted-linked-lists/1",
+              "yt": null
+            },
+            {
+              "id": "4_replace_each_array_element_by_its_corresponding_rank",
+              "title": "Replace each array element by its corresponding rank",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "5_task_scheduler",
+              "title": "Task Scheduler",
+              "slug": "task-scheduler",
+              "leetcode": "https://leetcode.com/problems/task-scheduler/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "6_hands_of_straights",
+              "title": "Hands of Straights",
+              "slug": "hand-of-straights",
+              "leetcode": "https://leetcode.com/problems/hand-of-straights/",
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Hard Problems",
+          "problems": [
+            {
+              "id": "0_design_twitter",
+              "title": "Design twitter",
+              "slug": "design-twitter",
+              "leetcode": "https://leetcode.com/problems/design-twitter/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_connect_`n`_ropes_with_minimal_cost",
+              "title": "Connect `n` ropes with minimal cost",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/rod-cutting0840/1",
+              "yt": null
+            },
+            {
+              "id": "2_kth_largest_element_in_a_stream_of_running_integers",
+              "title": "Kth largest element in a stream of running integers",
+              "slug": "kth-largest-element-in-a-stream",
+              "leetcode": "https://leetcode.com/problems/kth-largest-element-in-a-stream/#:~:text=Implement%20KthLargest%20class%3A,largest%20element%20in%20the%20stream.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/kth-largest-element-in-a-stream2220/1",
+              "yt": null
+            },
+            {
+              "id": "3_maximum_sum_combination",
+              "title": "Maximum Sum Combination",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_find_median_from_data_stream",
+              "title": "Find Median from Data Stream",
+              "slug": "find-median-from-data-stream",
+              "leetcode": "https://leetcode.com/problems/find-median-from-data-stream/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-median-in-a-stream-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "5_k_most_frequent_elements",
+              "title": "K most frequent elements",
+              "slug": "top-k-frequent-elements",
+              "leetcode": "https://leetcode.com/problems/top-k-frequent-elements/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/top-k-frequent-elements-in-array/1",
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Greedy Algorithms",
+      "subtitle": "Easy -> Medium -> Hard",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Easy Problems",
+          "problems": [
+            {
+              "id": "0_assign_cookies",
+              "title": "Assign Cookies",
+              "slug": "assign-cookies",
+              "leetcode": "https://leetcode.com/problems/assign-cookies/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_fractional_knapsack_problem",
+              "title": "Fractional Knapsack Problem",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=F_DDzYnxO14&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=49"
+            },
+            {
+              "id": "2_greedy_algorithm_to_find_minimum",
+              "title": "Greedy algorithm to find minimum",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/-minimum-number-of-coins4426/1",
+              "yt": "https://www.youtube.com/watch?v=mVg9CfJvayM&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=48"
+            },
+            {
+              "id": "3_lemonade_change",
+              "title": "Lemonade Change",
+              "slug": "lemonade-change",
+              "leetcode": "https://leetcode.com/problems/lemonade-change/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_valid_paranthesis_checker",
+              "title": "Valid Paranthesis Checker",
+              "slug": "valid-parenthesis-string",
+              "leetcode": "https://leetcode.com/problems/valid-parenthesis-string/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/parenthesis-checker2744/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Medium /Hard Problems",
+          "problems": [
+            {
+              "id": "0_n_meetings_in_one_room",
+              "title": "N meetings in one room",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=II6ziNnub1Q&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=45"
+            },
+            {
+              "id": "1_jump_game",
+              "title": "Jump Game",
+              "slug": "jump-game",
+              "leetcode": "https://leetcode.com/problems/jump-game/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/jump-game/1",
+              "yt": null
+            },
+            {
+              "id": "2_jump_game_2",
+              "title": "Jump Game 2",
+              "slug": "jump-game-ii",
+              "leetcode": "https://leetcode.com/problems/jump-game-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1",
+              "yt": null
+            },
+            {
+              "id": "3_minimum_number_of_platforms_required_for_a_railway",
+              "title": "Minimum number of platforms required for a railway",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=dxVcMDI7vyI&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=46"
+            },
+            {
+              "id": "4_job_sequencing_problem",
+              "title": "Job sequencing Problem",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=LjPx4wQaRIs&list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&index=47"
+            },
+            {
+              "id": "5_candy",
+              "title": "Candy",
+              "slug": "candy",
+              "leetcode": "https://leetcode.com/problems/candy/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "6_program_for_shortest_job_first_(or_sjf)_cpu_scheduling",
+              "title": "Program for Shortest Job First (or SJF) CPU Scheduling",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "7_program_for_least_recently_used_(lru)_page_replacement_algorithm",
+              "title": "Program for Least Recently Used (LRU) Page Replacement Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/page-faults-in-lru5603/1",
+              "yt": null
+            },
+            {
+              "id": "8_insert_interval",
+              "title": "Insert Interval",
+              "slug": "insert-interval",
+              "leetcode": "https://leetcode.com/problems/insert-interval/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "9_merge_intervals",
+              "title": "Merge Intervals",
+              "slug": "merge-intervals",
+              "leetcode": "https://leetcode.com/problems/merge-intervals/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/8a644e94faaa94968d8665ba9e0a80d1ae3e0a2d/1",
+              "yt": "https://www.youtube.com/watch?v=2JzRBPFYbKE&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=6"
+            },
+            {
+              "id": "10_non-overlapping_intervals",
+              "title": "Non-overlapping Intervals",
+              "slug": "non-overlapping-intervals",
+              "leetcode": "https://leetcode.com/problems/non-overlapping-intervals/",
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Binary Tree",
+      "subtitle": "Traversals, Medium and Hard Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Traversals",
+          "problems": [
+            {
+              "id": "0_introduction_to_trees",
+              "title": "Introduction to Trees",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/_ANrF3FJm7I"
+            },
+            {
+              "id": "1_binary_tree_representation_in_c++",
+              "title": "Binary Tree Representation in C++",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/ctCpP0RFDFc"
+            },
+            {
+              "id": "2_binary_tree_representation_in_java",
+              "title": "Binary Tree Representation in Java",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/hyLyW7rP24I"
+            },
+            {
+              "id": "3_binary_tree_traversals_in_binary_tree_",
+              "title": "Binary Tree Traversals in Binary Tree  ",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/jmy0LaGET1I"
+            },
+            {
+              "id": "4_preorder_traversal_of_binary_tree",
+              "title": "Preorder Traversal of Binary Tree",
+              "slug": "binary-tree-preorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/preorder-traversal/1",
+              "yt": "https://youtu.be/RlUu72JrOCQ"
+            },
+            {
+              "id": "5_inorder_traversal_of_binary_tree",
+              "title": "Inorder Traversal of Binary Tree",
+              "slug": "binary-tree-inorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/inorder-traversal/1",
+              "yt": "https://youtu.be/Z_NEgBgbRVI"
+            },
+            {
+              "id": "6_post-order_traversal_of_binary_tree",
+              "title": "Post-order Traversal of Binary Tree",
+              "slug": "binary-tree-postorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/postorder-traversal/1",
+              "yt": "https://youtu.be/COQOU6klsBg"
+            },
+            {
+              "id": "7_level_order_traversal_/_level_order_traversal_in_spiral_form",
+              "title": "Level order Traversal / Level order traversal in spiral form",
+              "slug": "binary-tree-level-order-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/level-order-traversal-in-spiral-form/1",
+              "yt": "https://youtu.be/EoAsWbO7sqg"
+            },
+            {
+              "id": "8_iterative_preorder_traversal_of_binary_tree",
+              "title": "Iterative Preorder Traversal of Binary Tree",
+              "slug": "binary-tree-preorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/preorder-traversal/1",
+              "yt": "https://youtu.be/Bfqd8BsPVuw"
+            },
+            {
+              "id": "9_iterative_inorder_traversal_of_binary_tree",
+              "title": "Iterative Inorder Traversal of Binary Tree",
+              "slug": "binary-tree-inorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/inorder-traversal/1",
+              "yt": "https://youtu.be/lxTGsVXjwvM"
+            },
+            {
+              "id": "10_post-order_traversal_of_binary_tree_using_2_stack",
+              "title": "Post-order Traversal of Binary Tree using 2 stack",
+              "slug": "binary-tree-postorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/postorder-traversal/1",
+              "yt": "https://youtu.be/2YBhNLodD8Q"
+            },
+            {
+              "id": "11_post-order_traversal_of_binary_tree_using_1_stack",
+              "title": "Post-order Traversal of Binary Tree using 1 stack",
+              "slug": "binary-tree-postorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/postorder-traversal/1",
+              "yt": "https://youtu.be/NzIGLLwZBS8"
+            },
+            {
+              "id": "12_preorder,_inorder,_and_postorder_traversal_in_one_traversal",
+              "title": "Preorder, Inorder, and Postorder Traversal in one Traversal",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/postorder-traversal-iterative/1",
+              "yt": "https://youtu.be/ySp2epYvgTE"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Medium Problems",
+          "problems": [
+            {
+              "id": "0_height_of_a_binary_tree",
+              "title": "Height of a Binary Tree",
+              "slug": "maximum-depth-of-binary-tree",
+              "leetcode": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1",
+              "yt": "https://youtu.be/eD3tmO66aBA"
+            },
+            {
+              "id": "1_check_if_the_binary_tree_is_height-balanced_or_not",
+              "title": "Check if the Binary tree is height-balanced or not",
+              "slug": "balanced-binary-tree",
+              "leetcode": "https://leetcode.com/problems/balanced-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/1",
+              "yt": "https://youtu.be/Yt50Jfbd8Po"
+            },
+            {
+              "id": "2_diameter_of_binary_tree",
+              "title": "Diameter of Binary Tree",
+              "slug": "diameter-of-binary-tree",
+              "leetcode": "https://leetcode.com/problems/diameter-of-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1",
+              "yt": "https://youtu.be/Rezetez59Nk"
+            },
+            {
+              "id": "3_maximum_path_sum",
+              "title": "Maximum path sum",
+              "slug": "binary-tree-maximum-path-sum",
+              "leetcode": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-path-sum-from-any-node/1",
+              "yt": "https://youtu.be/WszrfSwMz58"
+            },
+            {
+              "id": "4_check_if_two_trees_are_identical_or_not",
+              "title": "Check if two trees are identical or not",
+              "slug": "same-tree",
+              "leetcode": "https://leetcode.com/problems/same-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/determine-if-two-trees-are-identical/1",
+              "yt": "https://youtu.be/BhuvF_-PWS0"
+            },
+            {
+              "id": "5_zig_zag_traversal_of_binary_tree",
+              "title": "Zig Zag Traversal of Binary Tree",
+              "slug": "binary-tree-zigzag-level-order-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/zigzag-tree-traversal/1",
+              "yt": "https://youtu.be/3OXWEdlIGl4"
+            },
+            {
+              "id": "6_boundary_traversal_of_binary_tree",
+              "title": "Boundary Traversal of Binary Tree",
+              "slug": "boundary-of-binary-tree",
+              "leetcode": "https://leetcode.com/problems/boundary-of-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/0",
+              "yt": "https://youtu.be/0ca1nvR0be4"
+            },
+            {
+              "id": "7_vertical_order_traversal_of_binary_tree",
+              "title": "Vertical Order Traversal of Binary Tree",
+              "slug": "vertical-order-traversal-of-a-binary-tree",
+              "leetcode": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-a-binary-tree-in-vertical-order/0",
+              "yt": "https://youtu.be/q_a6lpbKJdw"
+            },
+            {
+              "id": "8_top_view_of_binary_tree",
+              "title": "Top View of Binary Tree",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1",
+              "yt": "https://youtu.be/Et9OCDNvJ78"
+            },
+            {
+              "id": "9_bottom_view_of_binary_tree",
+              "title": "Bottom View of Binary Tree",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1",
+              "yt": "https://youtu.be/0FtVY6I4pB8"
+            },
+            {
+              "id": "10_right/left_view_of_binary_tree",
+              "title": "Right/Left View of Binary Tree",
+              "slug": "binary-tree-right-side-view",
+              "leetcode": "https://leetcode.com/problems/binary-tree-right-side-view/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1",
+              "yt": "https://youtu.be/KV4mRzTjlAk"
+            },
+            {
+              "id": "11_symmetric_binary_tree",
+              "title": "Symmetric Binary Tree",
+              "slug": "symmetric-tree",
+              "leetcode": "https://leetcode.com/problems/symmetric-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/symmetric-tree/1",
+              "yt": "https://youtu.be/nKggiEpBE"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Hard Problems",
+          "problems": [
+            {
+              "id": "0_root_to_node_path_in_binary_tree",
+              "title": "Root to Node Path in Binary Tree",
+              "slug": null,
+              "leetcode": "https://www.interviewbit.com/problems/path-to-given-node/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/root-to-leaf-paths/1",
+              "yt": "https://youtu.be/fmflMqVOC7k"
+            },
+            {
+              "id": "1_lca_in_binary_tree",
+              "title": "LCA in Binary Tree",
+              "slug": "lowest-common-ancestor-of-a-binary-tree",
+              "leetcode": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1",
+              "yt": "https://youtu.be/_-QHfMDde90"
+            },
+            {
+              "id": "2_maximum_width_of_a_binary_tree",
+              "title": "Maximum width of a Binary Tree",
+              "slug": "maximum-width-of-binary-tree",
+              "leetcode": "https://leetcode.com/problems/maximum-width-of-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-width-of-tree/1",
+              "yt": "https://youtu.be/ZbybYvcVLks"
+            },
+            {
+              "id": "3_check_for_children_sum_property",
+              "title": "Check for Children Sum Property",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/children-sum-parent/1",
+              "yt": "https://youtu.be/fnmisPM6cVo"
+            },
+            {
+              "id": "4_print_all_the_nodes_at_a_distance_of_k_in_a_binary_tree",
+              "title": "Print all the Nodes at a distance of K in a Binary Tree",
+              "slug": "all-nodes-distance-k-in-binary-tree",
+              "leetcode": "https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/nodes-at-given-distance-in-binary-tree/1",
+              "yt": "https://youtu.be/i9ORlEy6EsI"
+            },
+            {
+              "id": "5_minimum_time_taken_to_burn_the_binary_tree_from_a_node",
+              "title": "Minimum time taken to BURN the Binary Tree from a Node",
+              "slug": null,
+              "leetcode": "https://www.codingninjas.com/codestudio/problems/time-to-burn-tree_630563?source=youtube&campaign=Striver_Tree_Videos",
+              "gfg": "https://practice.geeksforgeeks.org/problems/burning-tree/1",
+              "yt": "https://youtu.be/2r5wLmQfD6g"
+            },
+            {
+              "id": "6_count_total_nodes_in_a_complete_binary_tree",
+              "title": "Count total Nodes in a COMPLETE Binary Tree",
+              "slug": "count-complete-tree-nodes",
+              "leetcode": "https://leetcode.com/problems/count-complete-tree-nodes/",
+              "gfg": null,
+              "yt": "https://youtu.be/u-yWemKGWO0"
+            },
+            {
+              "id": "7_requirements_needed_to_construct_a_unique_binary_tree_|_theory",
+              "title": "Requirements needed to construct a Unique Binary Tree | Theory",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/9GMECGQgWrQ"
+            },
+            {
+              "id": "8_construct_binary_tree_from_inorder_and_preorder",
+              "title": "Construct Binary Tree from inorder and preorder",
+              "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+              "leetcode": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/construct-tree-1/1",
+              "yt": "https://youtu.be/aZNaLrVebKQ"
+            },
+            {
+              "id": "9_construct_the_binary_tree_from_postorder_and_inorder_traversal",
+              "title": "Construct the Binary Tree from Postorder and Inorder Traversal",
+              "slug": "construct-binary-tree-from-inorder-and-postorder-traversal",
+              "leetcode": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/tree-from-postorder-and-inorder/1",
+              "yt": "https://youtu.be/LgLRTaEMRVc"
+            },
+            {
+              "id": "10_serialize_and_deserialize_binary_tree",
+              "title": "Serialize and deserialize Binary Tree",
+              "slug": "serialize-and-deserialize-binary-tree",
+              "leetcode": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/serialize-and-deserialize-a-binary-tree/1",
+              "yt": "https://youtu.be/-YbXySKJsX8"
+            },
+            {
+              "id": "11_morris_preorder_traversal_of_a_binary_tree",
+              "title": "Morris Preorder Traversal of a Binary Tree",
+              "slug": "binary-tree-inorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+              "gfg": null,
+              "yt": "https://youtu.be/80Zug6D1_r4"
+            },
+            {
+              "id": "12_morris_inorder_traversal_of_a_binary_tree",
+              "title": "Morris Inorder Traversal of a Binary Tree",
+              "slug": "binary-tree-inorder-traversal",
+              "leetcode": "https://leetcode.com/problems/binary-tree-inorder-traversal/",
+              "gfg": null,
+              "yt": "https://youtu.be/80Zug6D1_r4"
+            },
+            {
+              "id": "13_flatten_binary_tree_to_linkedlist",
+              "title": "Flatten Binary Tree to LinkedList",
+              "slug": "flatten-binary-tree-to-linked-list",
+              "leetcode": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/flatten-binary-tree-to-linked-list/1",
+              "yt": "https://youtu.be/sWf7k1x9XR4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Binary Search Tree",
+      "subtitle": "Concept and Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Concepts",
+          "problems": [
+            {
+              "id": "0_introduction_to_binary_search_tree",
+              "title": "Introduction to Binary Search Tree",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/p7-9UvDQZ3w"
+            },
+            {
+              "id": "1_search_in_a_binary_search_tree",
+              "title": "Search in a Binary Search Tree",
+              "slug": "search-in-a-binary-search-tree",
+              "leetcode": "https://leetcode.com/problems/search-in-a-binary-search-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/search-a-node-in-bst/1",
+              "yt": "https://youtu.be/KcNt6v_56cc"
+            },
+            {
+              "id": "2_find_min/max_in_bst",
+              "title": "Find Min/Max in BST",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-element-in-bst/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Practice Problems",
+          "problems": [
+            {
+              "id": "0_ceil_in_a_binary_search_tree",
+              "title": "Ceil in a Binary Search Tree",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/implementing-ceil-in-bst/1",
+              "yt": "https://youtu.be/KSsk8AhdOZA"
+            },
+            {
+              "id": "1_floor_in_a_binary_search_tree",
+              "title": "Floor in a Binary Search Tree",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/xm_W1ub-K-w"
+            },
+            {
+              "id": "2_insert_a_given_node_in_binary_search_tree",
+              "title": "Insert a given Node in Binary Search Tree",
+              "slug": "insert-into-a-binary-search-tree",
+              "leetcode": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/insert-a-node-in-a-bst/1",
+              "yt": "https://youtu.be/FiFiNvM29ps"
+            },
+            {
+              "id": "3_delete_a_node_in_binary_search_tree",
+              "title": "Delete a Node in Binary Search Tree",
+              "slug": "delete-node-in-a-bst",
+              "leetcode": "https://leetcode.com/problems/delete-node-in-a-bst/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/delete-a-node-from-bst/1",
+              "yt": "https://youtu.be/kouxiP_H5WE"
+            },
+            {
+              "id": "4_find_k-th_smallest/largest_element_in_bst",
+              "title": "Find K-th smallest/largest element in BST",
+              "slug": "kth-smallest-element-in-a-bst",
+              "leetcode": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-k-th-smallest-element-in-bst/1#:~:text=Find%20the%20Kth%20Smallest%20element%20in%20the%20BST.&text=Your%20Task%3A,such%20element%20exists%20return%20%2D1.",
+              "yt": "https://youtu.be/9TJYWh0adfk"
+            },
+            {
+              "id": "5_check_if_a_tree_is_a_bst_or_bt",
+              "title": "Check if a tree is a BST or BT",
+              "slug": "validate-binary-search-tree",
+              "leetcode": "https://leetcode.com/problems/validate-binary-search-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/check-for-bst/1",
+              "yt": "https://youtu.be/f-sj7I5oXEI"
+            },
+            {
+              "id": "6_lca_in_binary_search_tree",
+              "title": "LCA in Binary Search Tree",
+              "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+              "leetcode": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-bst/1",
+              "yt": "https://youtu.be/cX_kPV_foZc"
+            },
+            {
+              "id": "7_construct_a_bst_from_a_preorder_traversal",
+              "title": "Construct a BST from a preorder traversal",
+              "slug": "construct-binary-search-tree-from-preorder-traversal",
+              "leetcode": "https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/preorder-to-postorder4423/1",
+              "yt": "https://youtu.be/UmJT3j26t1I"
+            },
+            {
+              "id": "8_inorder_successor/predecessor_in_bst",
+              "title": "Inorder Successor/Predecessor in BST",
+              "slug": "inorder-successor-in-bst",
+              "leetcode": "https://leetcode.com/problems/inorder-successor-in-bst/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/predecessor-and-successor/1",
+              "yt": "https://youtu.be/SXKAD2svfmI"
+            },
+            {
+              "id": "9_merge_2_bst’s",
+              "title": "Merge 2 BST’s",
+              "slug": "binary-search-tree-iterator",
+              "leetcode": "https://leetcode.com/problems/binary-search-tree-iterator/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/merge-two-bst-s/1",
+              "yt": "https://youtu.be/D2jMcmxU4bs"
+            },
+            {
+              "id": "10_two_sum_in_bst_|_check_if_there_exists_a_pair_with_sum_k",
+              "title": "Two Sum In BST | Check if there exists a pair with Sum K",
+              "slug": "two-sum-iv-input-is-a-bst",
+              "leetcode": "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-a-pair-with-given-target-in-bst/1",
+              "yt": "https://youtu.be/ssL3sHwPeb4"
+            },
+            {
+              "id": "11_recover_bst_|_correct_bst_with_two_nodes_swapped",
+              "title": "Recover BST | Correct BST with two nodes swapped",
+              "slug": "recover-binary-search-tree",
+              "leetcode": "https://leetcode.com/problems/recover-binary-search-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/reverse-array-in-groups0255/1",
+              "yt": "https://youtu.be/ZWGW7FminDM"
+            },
+            {
+              "id": "12_largest_bst_in_binary_tree",
+              "title": "Largest BST in Binary Tree",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/largest-bst/1",
+              "yt": "https://youtu.be/X0oXMdtUDwo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Graphs",
+      "subtitle": "Concepts and Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Learning",
+          "problems": [
+            {
+              "id": "0_graph_and_types",
+              "title": "Graph and Types",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/M3_pLsDdeuU"
+            },
+            {
+              "id": "1_graph_representation_|_c++",
+              "title": "Graph Representation | C++",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-adjacency-list-1587115620/1",
+              "yt": "https://youtu.be/3oI-34aPMWM"
+            },
+            {
+              "id": "2_graph_representation_|_java",
+              "title": "Graph Representation | Java",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-adjacency-list-1587115620/1",
+              "yt": "https://youtu.be/3oI-34aPMWM"
+            },
+            {
+              "id": "3_connected_components_|_logic_explanation",
+              "title": "Connected Components | Logic Explanation",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-provinces/1",
+              "yt": "https://youtu.be/lea-Wl_uWXY"
+            },
+            {
+              "id": "4_bfs",
+              "title": "BFS",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1",
+              "yt": "https://youtu.be/-tgVpUgsQ5k"
+            },
+            {
+              "id": "5_dfs",
+              "title": "DFS",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/next-larger-element-1587115620/1",
+              "yt": "https://youtu.be/Qzf1a--rhp8"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Problems on BFS /DFS",
+          "problems": [
+            {
+              "id": "0_number_of_provinces_(leetcode)",
+              "title": "Number of provinces (leetcode)",
+              "slug": "number-of-provinces",
+              "leetcode": "https://leetcode.com/problems/number-of-provinces/#:~:text=A%20province%20is%20a%20group,the%20total%20number%20of%20provinces.",
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-provinces/1",
+              "yt": "https://youtu.be/ACzkVtewUYA"
+            },
+            {
+              "id": "1_connected_components_problem_in_matrix",
+              "title": "Connected Components Problem in Matrix",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-provinces/1",
+              "yt": null
+            },
+            {
+              "id": "2_rotten_oranges",
+              "title": "Rotten Oranges",
+              "slug": "rotting-oranges",
+              "leetcode": "https://leetcode.com/problems/rotting-oranges/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/rotten-oranges2536/1",
+              "yt": "https://youtu.be/yf3oUhkvqA0"
+            },
+            {
+              "id": "3_flood_fill",
+              "title": "Flood fill",
+              "slug": "flood-fill",
+              "leetcode": "https://leetcode.com/problems/flood-fill/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/flood-fill-algorithm1856/1",
+              "yt": "https://youtu.be/C-2_uSRli8o"
+            },
+            {
+              "id": "4_cycle_detection_in_unirected_graph_(bfs)",
+              "title": "Cycle Detection in unirected Graph (bfs)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1",
+              "yt": "https://youtu.be/BPlrALf1LDU"
+            },
+            {
+              "id": "5_cycle_detection_in_undirected_graph_(dfs)",
+              "title": "Cycle Detection in undirected Graph (dfs)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1",
+              "yt": "https://youtu.be/zQ3zgFypzX4"
+            },
+            {
+              "id": "6_0/1_matrix_(bfs_problem)",
+              "title": "0/1 Matrix (Bfs Problem)",
+              "slug": "01-matrix",
+              "leetcode": "https://leetcode.com/problems/01-matrix/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1-1587115620/1",
+              "yt": "https://www.youtube.com/watch?v=edXdVwkYHF8"
+            },
+            {
+              "id": "7_surrounded_regions_(dfs)",
+              "title": "Surrounded Regions (dfs)",
+              "slug": "surrounded-regions",
+              "leetcode": "https://leetcode.com/problems/surrounded-regions/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/replace-os-with-xs0052/1",
+              "yt": "https://www.youtube.com/watch?v=BtdgAys4yMk"
+            },
+            {
+              "id": "8_number_of_enclaves_[flood_fill_implementation_–_multisource]",
+              "title": "Number of Enclaves [flood fill implementation – multisource]",
+              "slug": "number-of-enclaves",
+              "leetcode": "https://leetcode.com/problems/number-of-enclaves/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-enclaves/1",
+              "yt": "https://www.youtube.com/watch?v=rxKcepXQgU4"
+            },
+            {
+              "id": "9_word_ladder_–_1",
+              "title": "Word ladder – 1",
+              "slug": "word-ladder",
+              "leetcode": "https://leetcode.com/problems/word-ladder/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/word-ladder/1",
+              "yt": null
+            },
+            {
+              "id": "10_word_ladder_–_2",
+              "title": "Word ladder – 2",
+              "slug": "word-ladder-ii",
+              "leetcode": "https://leetcode.com/problems/word-ladder-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/word-ladder-ii/1",
+              "yt": null
+            },
+            {
+              "id": "11_number_of_distinct_islands_[dfs_multisource]",
+              "title": "Number of Distinct Islands [dfs multisource]",
+              "slug": "number-of-distinct-islands-ii",
+              "leetcode": "https://leetcode.com/problems/number-of-distinct-islands-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-distinct-islands/1",
+              "yt": null
+            },
+            {
+              "id": "12_bipartite_graph_(dfs)",
+              "title": "Bipartite Graph (DFS)",
+              "slug": "is-graph-bipartite",
+              "leetcode": "https://leetcode.com/problems/is-graph-bipartite/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/bipartite-graph/1",
+              "yt": "https://www.youtube.com/watch?v=KG5YFfR0j8A"
+            },
+            {
+              "id": "13_cycle_detection_in_directed_graph_(dfs)",
+              "title": "Cycle Detection in Directed Graph (DFS)",
+              "slug": "course-schedule-ii",
+              "leetcode": "https://leetcode.com/problems/course-schedule-ii/discuss/293048/detecting-cycle-in-directed-graph-problem",
+              "gfg": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Topo Sort and Problems",
+          "problems": [
+            {
+              "id": "0_topo_sort",
+              "title": "Topo Sort",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/topological-sort/1",
+              "yt": null
+            },
+            {
+              "id": "1_kahn’s_algorithm",
+              "title": "Kahn’s Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/topological-sort/1",
+              "yt": null
+            },
+            {
+              "id": "2_cycle_detection_in_directed_graph_(bfs)",
+              "title": "Cycle Detection in Directed Graph (BFS)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1",
+              "yt": null
+            },
+            {
+              "id": "3_course_schedule_–_i",
+              "title": "Course Schedule – I",
+              "slug": "course-schedule",
+              "leetcode": "https://leetcode.com/problems/course-schedule/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/course-schedule/1",
+              "yt": null
+            },
+            {
+              "id": "4_course_schedule_–_ii",
+              "title": "Course Schedule – II",
+              "slug": "course-schedule-ii",
+              "leetcode": "https://leetcode.com/problems/course-schedule-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/course-schedule/1",
+              "yt": null
+            },
+            {
+              "id": "5_find_eventual_safe_states",
+              "title": "Find eventual safe states",
+              "slug": "find-eventual-safe-states",
+              "leetcode": "https://leetcode.com/problems/find-eventual-safe-states/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/eventual-safe-states/1",
+              "yt": null
+            },
+            {
+              "id": "6_alien_dictionary",
+              "title": "Alien dictionary",
+              "slug": "alien-dictionary",
+              "leetcode": "https://leetcode.com/problems/alien-dictionary/solution/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/alien-dictionary/1",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Shortest Path Algorithms and Problems",
+          "problems": [
+            {
+              "id": "0_shortest_path_in_ug_with_unit_weights",
+              "title": "Shortest Path in UG with unit weights",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "1_shortest_path_in_dag",
+              "title": "Shortest Path in DAG",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "2_djisktra’s_algorithm",
+              "title": "Djisktra’s Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1",
+              "yt": null
+            },
+            {
+              "id": "3_why_priority_queue_is_used_in_djisktra’s_algorithm",
+              "title": "Why priority Queue is used in Djisktra’s Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "4_shortest_path_in_a_binary_maze",
+              "title": "Shortest path in a binary maze",
+              "slug": "shortest-path-in-binary-matrix",
+              "leetcode": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/shortest-path-in-a-binary-maze-1655453161/1",
+              "yt": null
+            },
+            {
+              "id": "5_path_with_minimum_effort",
+              "title": "Path with minimum effort",
+              "slug": "path-with-minimum-effort",
+              "leetcode": "https://leetcode.com/problems/path-with-minimum-effort/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "6_cheapest_flights_within_k_stops",
+              "title": "Cheapest flights within k stops",
+              "slug": "cheapest-flights-within-k-stops",
+              "leetcode": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "7_network_delay_time",
+              "title": "Network Delay time",
+              "slug": "network-delay-time",
+              "leetcode": "https://leetcode.com/problems/network-delay-time/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/alex-travelling/1",
+              "yt": null
+            },
+            {
+              "id": "8_number_of_ways_to_arrive_at_destination",
+              "title": "Number of ways to arrive at destination",
+              "slug": "number-of-ways-to-arrive-at-destination",
+              "leetcode": "https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-ways-to-arrive-at-destination/1",
+              "yt": null
+            },
+            {
+              "id": "9_minimum_steps_to_reach_end_from_start_by_performing_multiplication_and_mod_operations_with_array_elements",
+              "title": "Minimum steps to reach end from start by performing multiplication and mod operations with array elements",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-multiplications-to-reach-end/1",
+              "yt": null
+            },
+            {
+              "id": "10_bellman_ford_algorithm",
+              "title": "Bellman Ford Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1",
+              "yt": null
+            },
+            {
+              "id": "11_floyd_warshal_algorithm",
+              "title": "Floyd Warshal Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1",
+              "yt": null
+            },
+            {
+              "id": "12_find_the_city_with_the_smallest_number_of_neighbors_in_a_threshold_distance",
+              "title": "Find the city with the smallest number of neighbors in a threshold distance",
+              "slug": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+              "leetcode": "https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/0?category%5B%5D=Shortest%20Path&category%5B%5D=Shortest%20Path&page=1&query=category%5B%5DShortest%20Pathpage1category%5B%5DShortest%20Path",
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Minimum Spanning Tree / Disjoint Set Problems",
+          "problems": [
+            {
+              "id": "0_minimum_spanning_tree",
+              "title": "Minimum Spanning Tree",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
+              "yt": null
+            },
+            {
+              "id": "1_prim’s_algorithm",
+              "title": "Prim’s Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
+              "yt": null
+            },
+            {
+              "id": "2_disjoint_set_[union_by_rank]",
+              "title": "Disjoint Set [Union by Rank]",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/disjoint-set-union-find/1",
+              "yt": null
+            },
+            {
+              "id": "3_disjoint_set_[union_by_size]",
+              "title": "Disjoint Set [Union by Size]",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/disjoint-set-union-find/1",
+              "yt": null
+            },
+            {
+              "id": "4_kruskal’s_algorithm",
+              "title": "Kruskal’s Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1",
+              "yt": null
+            },
+            {
+              "id": "5_number_of_operations_to_make_network_connected",
+              "title": "Number of operations to make network connected",
+              "slug": "number-of-operations-to-make-network-connected",
+              "leetcode": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "6_most_stones_removed_with_same_rows_or_columns",
+              "title": "Most stones removed with same rows or columns",
+              "slug": "most-stones-removed-with-same-row-or-column",
+              "leetcode": "https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "7_accounts_merge",
+              "title": "Accounts merge",
+              "slug": "accounts-merge",
+              "leetcode": "https://leetcode.com/problems/accounts-merge/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/merging-details/1",
+              "yt": null
+            },
+            {
+              "id": "8_number_of_island_ii",
+              "title": "Number of island II",
+              "slug": "number-of-islands-ii",
+              "leetcode": "https://leetcode.com/problems/number-of-islands-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/1",
+              "yt": null
+            },
+            {
+              "id": "9_making_a_large_island",
+              "title": "Making a Large Island",
+              "slug": "making-a-large-island",
+              "leetcode": "https://leetcode.com/problems/making-a-large-island/",
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "10_swim_in_rising_water",
+              "title": "Swim in rising water",
+              "slug": "swim-in-rising-water",
+              "leetcode": "https://leetcode.com/problems/swim-in-rising-water/",
+              "gfg": null,
+              "yt": null
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Other Algorithms",
+          "problems": [
+            {
+              "id": "0_bridges_in_graph",
+              "title": "Bridges in Graph",
+              "slug": "critical-connections-in-a-network",
+              "leetcode": "https://leetcode.com/problems/critical-connections-in-a-network/discuss/382385/find-bridges-in-a-graph",
+              "gfg": "https://practice.geeksforgeeks.org/problems/bridge-edge-in-graph/1",
+              "yt": null
+            },
+            {
+              "id": "1_articulation_point",
+              "title": "Articulation Point",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/articulation-point-1/1",
+              "yt": null
+            },
+            {
+              "id": "2_kosaraju’s_algorithm",
+              "title": "Kosaraju’s Algorithm",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1",
+              "yt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Dynamic Programming",
+      "subtitle": "Patterns and Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Introduction to DP",
+          "problems": [
+            {
+              "id": "0_dynamic_programming_introduction",
+              "title": "Dynamic Programming Introduction",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/tyB0ztf0DNY"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "1D DP",
+          "problems": [
+            {
+              "id": "0_climbing_stars",
+              "title": "Climbing Stars",
+              "slug": "climbing-stairs",
+              "leetcode": "https://leetcode.com/problems/climbing-stairs/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-ways-to-reach-the-nth-stair-1587115620/1",
+              "yt": "https://youtu.be/mLfjzJsN8us"
+            },
+            {
+              "id": "1_frog_jump(dp-3)",
+              "title": "Frog Jump(DP-3)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=EgG3jsGoPvQ"
+            },
+            {
+              "id": "2_frog_jump_with_k_distances(dp-4)",
+              "title": "Frog Jump with k distances(DP-4)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=Kmh3rhyEtB8"
+            },
+            {
+              "id": "3_maximum_sum_of_non-adjacent_elements_(dp_5)",
+              "title": "Maximum sum of non-adjacent elements (DP 5)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/max-sum-without-adjacents2430/1",
+              "yt": "https://www.youtube.com/watch?v=GrMBfJNk_NY"
+            },
+            {
+              "id": "4_house_robber_(dp_6)",
+              "title": "House Robber (DP 6)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1",
+              "yt": "https://www.youtube.com/watch?v=3WaxQMELSkw"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "2D /3D DP and DP on Grids",
+          "problems": [
+            {
+              "id": "0_ninja’s_training_(dp_7)",
+              "title": "Ninja’s Training (DP 7)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=AE39gJYuRog"
+            },
+            {
+              "id": "1_grid_unique_paths_:_dp_on_grids_(dp8)",
+              "title": "Grid Unique Paths : DP on Grids (DP8)",
+              "slug": "unique-paths",
+              "leetcode": "https://leetcode.com/problems/unique-paths/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-unique-paths5339/1",
+              "yt": "https://www.youtube.com/watch?v=sdE0A2Oxofw"
+            },
+            {
+              "id": "2_grid_unique_paths_2_(dp_9)",
+              "title": "Grid Unique Paths 2 (DP 9)",
+              "slug": "unique-paths-ii",
+              "leetcode": "https://leetcode.com/problems/unique-paths-ii/",
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=TmhpgXScLyY"
+            },
+            {
+              "id": "3_minimum_path_sum_in_grid_(dp_10)",
+              "title": "Minimum path sum in Grid (DP 10)",
+              "slug": "minimum-path-sum",
+              "leetcode": "https://leetcode.com/problems/minimum-path-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-cost-path3833/1",
+              "yt": "https://www.youtube.com/watch?v=_rgTlyky1uQ"
+            },
+            {
+              "id": "4_minimum_path_sum_in_triangular_grid_(dp_11)",
+              "title": "Minimum path sum in Triangular Grid (DP 11)",
+              "slug": "triangle",
+              "leetcode": "https://leetcode.com/problems/triangle/",
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=SrP-PiLSYC0"
+            },
+            {
+              "id": "5_minimum/maximum_falling_path_sum_(dp-12)",
+              "title": "Minimum/Maximum Falling Path Sum (DP-12)",
+              "slug": "minimum-falling-path-sum",
+              "leetcode": "https://leetcode.com/problems/minimum-falling-path-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/path-in-matrix3805/1",
+              "yt": "https://www.youtube.com/watch?v=N_aJ5qQbYA0"
+            },
+            {
+              "id": "6_3d_dp_:_ninja_and_his_friends_(dp-13)",
+              "title": "3D DP : Ninja and his friends (DP-13)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=QGfn7JeXK54"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "DP on Subsequence",
+          "problems": [
+            {
+              "id": "0_subset_sum_equal_to_target_(dp-_14)",
+              "title": "Subset sum equal to target (DP- 14)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1",
+              "yt": "https://www.youtube.com/watch?v=fWX9xDmIzRI"
+            },
+            {
+              "id": "1_partition_equal_subset_sum_(dp-_15)",
+              "title": "Partition Equal Subset Sum (DP- 15)",
+              "slug": "partition-equal-subset-sum",
+              "leetcode": "https://leetcode.com/problems/partition-equal-subset-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1",
+              "yt": "https://www.youtube.com/watch?v=7win3dcgo3k"
+            },
+            {
+              "id": "2_partition_set_into_2_subsets_with_min_absolute_sum_diff_(dp-_16)",
+              "title": "Partition Set Into 2 Subsets With Min Absolute Sum Diff (DP- 16)",
+              "slug": "partition-array-into-two-arrays-to-minimize-sum-difference",
+              "leetcode": "https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-sum-partition3317/1",
+              "yt": "https://www.youtube.com/watch?v=GS_OqZb2CWc"
+            },
+            {
+              "id": "3_count_subsets_with_sum_k_(dp_–_17)",
+              "title": "Count Subsets with Sum K (DP – 17)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/perfect-sum-problem5633/1",
+              "yt": "https://www.youtube.com/watch?v=ZHyb-A2Mte4"
+            },
+            {
+              "id": "4_count_partitions_with_given_difference_(dp_–_18)",
+              "title": "Count Partitions with Given Difference (DP – 18)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=zoilQD1kYSg"
+            },
+            {
+              "id": "5_0/1_knapsack_(dp_–_19)",
+              "title": "0/1 Knapsack (DP – 19)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1",
+              "yt": "https://www.youtube.com/watch?v=GqOmJHQZivw"
+            },
+            {
+              "id": "6_minimum_coins_(dp_–_20)",
+              "title": "Minimum Coins (DP – 20)",
+              "slug": "coin-change",
+              "leetcode": "https://leetcode.com/problems/coin-change/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/-minimum-number-of-coins4426/1",
+              "yt": "https://www.youtube.com/watch?v=myPeWb3Y68A"
+            },
+            {
+              "id": "7_target_sum_(dp_–_21)",
+              "title": "Target Sum (DP – 21)",
+              "slug": "target-sum",
+              "leetcode": "https://leetcode.com/problems/target-sum/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/target-sum-1626326450/1",
+              "yt": "https://www.youtube.com/watch?v=b3GD8263-PQ"
+            },
+            {
+              "id": "8_coin_change_2_(dp_–_22)",
+              "title": "Coin Change 2 (DP – 22)",
+              "slug": "coin-change-2",
+              "leetcode": "https://leetcode.com/problems/coin-change-2/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/coin-change2448/1",
+              "yt": "https://www.youtube.com/watch?v=HgyouUi11zk"
+            },
+            {
+              "id": "9_unbounded_knapsack_(dp_–_23)",
+              "title": "Unbounded Knapsack (DP – 23)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1",
+              "yt": "https://youtu.be/OgvOZ6OrJoY"
+            },
+            {
+              "id": "10_rod_cutting_problem_|_(dp_–_24)",
+              "title": "Rod Cutting Problem | (DP – 24)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/rod-cutting0840/1",
+              "yt": "https://youtu.be/mO8XpGoJwuo"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "DP on Strings",
+          "problems": [
+            {
+              "id": "0_longest_common_subsequence_|_(dp_–_25)",
+              "title": "Longest Common Subsequence | (DP – 25)",
+              "slug": "longest-common-subsequence",
+              "leetcode": "https://leetcode.com/problems/longest-common-subsequence/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1",
+              "yt": "https://youtu.be/NPZn9jBrX8U"
+            },
+            {
+              "id": "1_print_longest_common_subsequence_|_(dp_–_26)",
+              "title": "Print Longest Common Subsequence | (DP – 26)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/print-all-lcs-sequences3413/1",
+              "yt": "https://youtu.be/-zI4mrF2Pb4"
+            },
+            {
+              "id": "2_longest_common_substring_|_(dp_–_27)",
+              "title": "Longest Common Substring | (DP – 27)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-common-substring1452/1",
+              "yt": "https://youtu.be/_wP9mWNPL5w"
+            },
+            {
+              "id": "3_longest_palindromic_subsequence_|_(dp-28)",
+              "title": "Longest Palindromic Subsequence | (DP-28)",
+              "slug": "longest-palindromic-subsequence",
+              "leetcode": "https://leetcode.com/problems/longest-palindromic-subsequence/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1",
+              "yt": "https://youtu.be/6i_T5kkfv4A"
+            },
+            {
+              "id": "4_minimum_insertions_to_make_string_palindrome_|_dp-29",
+              "title": "Minimum insertions to make string palindrome | DP-29",
+              "slug": "minimum-insertion-steps-to-make-a-string-palindrome",
+              "leetcode": "https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/form-a-palindrome1455/1",
+              "yt": "https://www.youtube.com/watch?v=xPBLEj41rFU"
+            },
+            {
+              "id": "5_minimum_insertions/deletions_to_convert_string_|_(dp-_30)",
+              "title": "Minimum Insertions/Deletions to Convert String | (DP- 30)",
+              "slug": "delete-operation-for-two-strings",
+              "leetcode": "https://leetcode.com/problems/delete-operation-for-two-strings/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-number-of-deletions-and-insertions0209/1",
+              "yt": "https://www.youtube.com/watch?v=yMnH0jrir0Q"
+            },
+            {
+              "id": "6_shortest_common_supersequence_|_(dp_–_31)",
+              "title": "Shortest Common Supersequence | (DP – 31)",
+              "slug": "shortest-common-supersequence",
+              "leetcode": "https://leetcode.com/problems/shortest-common-supersequence/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/shortest-common-supersequence0322/1",
+              "yt": "https://youtu.be/xElxAuBcvsU"
+            },
+            {
+              "id": "7_distinct_subsequences|_(dp-32)",
+              "title": "Distinct Subsequences| (DP-32)",
+              "slug": "distinct-subsequences",
+              "leetcode": "https://leetcode.com/problems/distinct-subsequences/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/number-of-distinct-subsequences0909/1",
+              "yt": "https://youtu.be/nVG7eTiD2bY"
+            },
+            {
+              "id": "8_edit_distance_|_(dp-33)",
+              "title": "Edit Distance | (DP-33)",
+              "slug": "edit-distance",
+              "leetcode": "https://leetcode.com/problems/edit-distance/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/edit-distance3702/1",
+              "yt": "https://youtu.be/fJaKO8FbDdo"
+            },
+            {
+              "id": "9_wildcard_matching_|_(dp-34)",
+              "title": "Wildcard Matching | (DP-34)",
+              "slug": "wildcard-matching",
+              "leetcode": "https://leetcode.com/problems/wildcard-matching/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/wildcard-pattern-matching/1",
+              "yt": "https://youtu.be/ZmlQ3vgAOMo"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "DP on Stocks",
+          "problems": [
+            {
+              "id": "0_best_time_to_buy_and_sell_stock_|(dp-35)",
+              "title": "Best Time to Buy and Sell Stock |(DP-35)",
+              "slug": "best-time-to-buy-and-sell-stock",
+              "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/stock-buy-and-sell-1587115621/1",
+              "yt": "https://youtu.be/excAOvwF_Wk"
+            },
+            {
+              "id": "1_buy_and_sell_stock_–_ii|(dp-36)",
+              "title": "Buy and Sell Stock – II|(DP-36)",
+              "slug": "best-time-to-buy-and-sell-stock-ii",
+              "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+              "gfg": null,
+              "yt": "https://youtu.be/nGJmxkUJQGs"
+            },
+            {
+              "id": "2_buy_and_sell_stocks_iii|(dp-37)",
+              "title": "Buy and Sell Stocks III|(DP-37)",
+              "slug": "best-time-to-buy-and-sell-stock-iii",
+              "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/buy-and-sell-a-share-at-most-twice/1",
+              "yt": "https://youtu.be/-uQGzhYj8BQ"
+            },
+            {
+              "id": "3_buy_and_stock_sell_iv_|(dp-38)",
+              "title": "Buy and Stock Sell IV |(DP-38)",
+              "slug": "best-time-to-buy-and-sell-stock-iv",
+              "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-profit4657/1",
+              "yt": "https://youtu.be/IV1dHbk5CDc"
+            },
+            {
+              "id": "4_buy_and_sell_stocks_with_cooldown|(dp-39)",
+              "title": "Buy and Sell Stocks With Cooldown|(DP-39)",
+              "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+              "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+              "gfg": null,
+              "yt": "https://youtu.be/IGIe46xw3YY"
+            },
+            {
+              "id": "5_buy_and_sell_stocks_with_transaction_fee|(dp-40)",
+              "title": "Buy and Sell Stocks With Transaction Fee|(DP-40)",
+              "slug": "best-time-to-buy-and-sell-stock-with-transaction-fee",
+              "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/",
+              "gfg": null,
+              "yt": "https://youtu.be/k4eK-vEmnKg"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "DP on LIS",
+          "problems": [
+            {
+              "id": "0_longest_increasing_subsequence_|(dp-41)",
+              "title": "Longest Increasing Subsequence |(DP-41)",
+              "slug": "longest-increasing-subsequence",
+              "leetcode": "https://leetcode.com/problems/longest-increasing-subsequence/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence-1587115620/1",
+              "yt": "https://youtu.be/ekcwMsSIzVc"
+            },
+            {
+              "id": "1_printing_longest_increasing_subsequence|(dp-42)",
+              "title": "Printing Longest Increasing Subsequence|(DP-42)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/IFfYfonAFGc"
+            },
+            {
+              "id": "2_longest_increasing_subsequence_|(dp-43)",
+              "title": "Longest Increasing Subsequence |(DP-43)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-increasing-subsequence-1587115620/1",
+              "yt": "https://youtu.be/on2hvxBXJH4"
+            },
+            {
+              "id": "3_largest_divisible_subset|(dp-44)",
+              "title": "Largest Divisible Subset|(DP-44)",
+              "slug": "largest-divisible-subset",
+              "leetcode": "https://leetcode.com/problems/largest-divisible-subset/",
+              "gfg": null,
+              "yt": "https://youtu.be/gDuZwBW9VvM"
+            },
+            {
+              "id": "4_longest_string_chain|(dp-45)",
+              "title": "Longest String Chain|(DP-45)",
+              "slug": "longest-string-chain",
+              "leetcode": "https://leetcode.com/problems/longest-string-chain/",
+              "gfg": null,
+              "yt": "https://youtu.be/YY8iBaYcc4g"
+            },
+            {
+              "id": "5_longest_bitonic_subsequence_|(dp-46)",
+              "title": "Longest Bitonic Subsequence |(DP-46)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-bitonic-subsequence0824/1",
+              "yt": "https://youtu.be/y4vN0WNdrlg"
+            },
+            {
+              "id": "6_number_of_longest_increasing_subsequences|(dp-47)",
+              "title": "Number of Longest Increasing Subsequences|(DP-47)",
+              "slug": "number-of-longest-increasing-subsequence",
+              "leetcode": "https://leetcode.com/problems/number-of-longest-increasing-subsequence/",
+              "gfg": null,
+              "yt": "https://youtu.be/cKVl1TFdNXg"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "MCM DP | Partition DP",
+          "problems": [
+            {
+              "id": "0_matrix_chain_multiplication|(dp-48)",
+              "title": "Matrix Chain Multiplication|(DP-48)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1",
+              "yt": "https://youtu.be/vRVfmbCFW7Y"
+            },
+            {
+              "id": "1_matrix_chain_multiplication_|_bottom-up|(dp-49)",
+              "title": "Matrix Chain Multiplication | Bottom-Up|(DP-49)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1",
+              "yt": "https://youtu.be/pDCXsbAw5Cg"
+            },
+            {
+              "id": "2_minimum_cost_to_cut_the_stick|(dp-50)",
+              "title": "Minimum Cost to Cut the Stick|(DP-50)",
+              "slug": "minimum-cost-to-cut-a-stick",
+              "leetcode": "https://leetcode.com/problems/minimum-cost-to-cut-a-stick/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/rod-cutting0840/1",
+              "yt": "https://youtu.be/xwomavsC86c"
+            },
+            {
+              "id": "3_burst_balloons|(dp-51)",
+              "title": "Burst Balloons|(DP-51)",
+              "slug": "burst-balloons",
+              "leetcode": "https://leetcode.com/problems/burst-balloons/",
+              "gfg": "https://practice.geeksforgeeks.org/batch-problems/maximum-triple-product/1/",
+              "yt": "https://youtu.be/Yz4LlDSlkns"
+            },
+            {
+              "id": "4_evaluate_boolean_expression_to_true|(dp-52)",
+              "title": "Evaluate Boolean Expression to True|(DP-52)",
+              "slug": "parsing-a-boolean-expression",
+              "leetcode": "https://leetcode.com/problems/parsing-a-boolean-expression/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/boolean-parenthesization5610/1",
+              "yt": "https://youtu.be/MM7fXopgyjw"
+            },
+            {
+              "id": "5_palindrome_partitioning_–_ii|(dp-53)",
+              "title": "Palindrome Partitioning – II|(DP-53)",
+              "slug": "palindrome-partitioning-ii",
+              "leetcode": "https://leetcode.com/problems/palindrome-partitioning-ii/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1",
+              "yt": "https://youtu.be/_H8V5hJUGd0"
+            },
+            {
+              "id": "6_partition_array_for_maximum_sum|(dp-54)",
+              "title": "Partition Array for Maximum Sum|(DP-54)",
+              "slug": "partition-array-for-maximum-sum",
+              "leetcode": "https://leetcode.com/problems/partition-array-for-maximum-sum/",
+              "gfg": null,
+              "yt": "https://youtu.be/PhWWJmaKfMc"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "DP on Squares",
+          "problems": [
+            {
+              "id": "0_maximum_rectangle_area_with_all_1’s|(dp-55)",
+              "title": "Maximum Rectangle Area with all 1’s|(DP-55)",
+              "slug": "maximal-rectangle",
+              "leetcode": "https://leetcode.com/problems/maximal-rectangle/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/max-rectangle/1",
+              "yt": "https://youtu.be/tOylVCugy9k"
+            },
+            {
+              "id": "1_count_square_submatrices_with_all_ones|(dp-56)",
+              "title": "Count Square Submatrices with All Ones|(DP-56)",
+              "slug": "count-square-submatrices-with-all-ones",
+              "leetcode": "https://leetcode.com/problems/count-square-submatrices-with-all-ones/",
+              "gfg": null,
+              "yt": "https://youtu.be/auS1fynpnjo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Tries",
+      "subtitle": "Concepts and Problems",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Theory",
+          "problems": [
+            {
+              "id": "0_implement_trie_|_insert_|_search_|_startswith",
+              "title": "Implement TRIE | INSERT | SEARCH | STARTSWITH",
+              "slug": "implement-trie-prefix-tree",
+              "leetcode": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/trie-insert-and-search0651/1",
+              "yt": "https://www.youtube.com/watch?v=dBGUmUQhjaM&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Problems",
+          "problems": [
+            {
+              "id": "0_implement_trie_–_2_(prefix_tree)",
+              "title": "Implement Trie – 2 (Prefix Tree)",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/trie-delete/1",
+              "yt": null
+            },
+            {
+              "id": "1_longest_string_with_all_prefixes",
+              "title": "Longest String with All Prefixes",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-common-prefix-in-an-array5129/1",
+              "yt": "https://www.youtube.com/watch?v=AWnBa91lThI&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=3"
+            },
+            {
+              "id": "2_number_of_distinct_substrings_in_a_string",
+              "title": "Number of Distinct Substrings in a String",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-of-distinct-substrings/1",
+              "yt": "https://www.youtube.com/watch?v=RV0QeTyHZxo&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=4"
+            },
+            {
+              "id": "3_bit_prerequisites_for_trie_problems",
+              "title": "Bit PreRequisites for TRIE Problems",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": "https://youtu.be/5iyuU4hQFrw"
+            },
+            {
+              "id": "4_maximum_xor_of_two_numbers_in_an_array",
+              "title": "Maximum XOR of two numbers in an array",
+              "slug": "maximum-xor-of-two-numbers-in-an-array",
+              "leetcode": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/maximum-xor-of-two-numbers-in-an-array/0",
+              "yt": "https://www.youtube.com/watch?v=EIhAwfHubE8&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=6"
+            },
+            {
+              "id": "5_maximum_xor_with_an_element_from_array",
+              "title": "Maximum XOR With an Element From Array",
+              "slug": "maximum-xor-with-an-element-from-array",
+              "leetcode": "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/",
+              "gfg": null,
+              "yt": "https://www.youtube.com/watch?v=Q8LhG9Pi5KM&list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&index=7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Strings",
+      "subtitle": "Hard Problems and Standard Algorithms",
+      "categories": [
+        {
+          "id": 1,
+          "title": "Hard Problems",
+          "problems": [
+            {
+              "id": "0_minimum_number_of_bracket_reversals_needed_to_make_an_expression_balanced",
+              "title": "Minimum number of bracket reversals needed to make an expression balanced",
+              "slug": "minimum-add-to-make-parentheses-valid",
+              "leetcode": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-the-reversals0401/1",
+              "yt": null
+            },
+            {
+              "id": "1_count_and_say",
+              "title": "Count and say",
+              "slug": "count-and-say",
+              "leetcode": "https://leetcode.com/problems/count-and-say/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/decode-the-pattern1138/1",
+              "yt": null
+            },
+            {
+              "id": "2_hashing_in_strings_|_theory",
+              "title": "Hashing In Strings | Theory",
+              "slug": null,
+              "leetcode": null,
+              "gfg": null,
+              "yt": null
+            },
+            {
+              "id": "3_rabin_karp",
+              "title": "Rabin Karp",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/31272eef104840f7430ad9fd1d43b434a4b9596b/1",
+              "yt": null
+            },
+            {
+              "id": "4_z-function",
+              "title": "Z-Function",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/8dcd25918295847b4ced54055eae35a8501181c1/1",
+              "yt": null
+            },
+            {
+              "id": "5_kmp_algo_/_lps(pi)_array",
+              "title": "KMP algo / LPS(pi) array",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/search-pattern0205/1",
+              "yt": null
+            },
+            {
+              "id": "6_shortest_palindrome",
+              "title": "Shortest Palindrome",
+              "slug": "shortest-palindrome",
+              "leetcode": "https://leetcode.com/problems/shortest-palindrome/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/minimum-characters-to-be-added-at-front-to-make-string-palindrome/1",
+              "yt": null
+            },
+            {
+              "id": "7_longest_happy_prefix",
+              "title": "Longest happy prefix",
+              "slug": "longest-happy-prefix",
+              "leetcode": "https://leetcode.com/problems/longest-happy-prefix/",
+              "gfg": "https://practice.geeksforgeeks.org/problems/longest-prefix-suffix2527/1",
+              "yt": null
+            },
+            {
+              "id": "8_count_palindromic_subsequence_in_given_string",
+              "title": "Count palindromic subsequence in given string",
+              "slug": null,
+              "leetcode": null,
+              "gfg": "https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1#:~:text=Given%20a%20string%20str%20of,formed%20from%20the%20string%20str.&text=Your%20Task%3A,read%20input%20or%20print%20anything.",
+              "yt": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
