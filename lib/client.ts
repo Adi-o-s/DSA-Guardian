@@ -1,5 +1,9 @@
 "use client";
 
+// Next.js basePath doesn't automatically prefix raw fetch() calls, so we
+// read it once here and prepend it to every request URL.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 // If the session has expired, the API returns 401. Reload so the server-rendered
 // layout re-evaluates auth and shows the sign-in screen.
 function handleUnauthorized(status: number) {
@@ -9,7 +13,7 @@ function handleUnauthorized(status: number) {
 }
 
 export const fetcher = (url: string) =>
-  fetch(url).then(async (r) => {
+  fetch(`${BASE_PATH}${url}`).then(async (r) => {
     if (!r.ok) {
       handleUnauthorized(r.status);
       throw new Error((await r.json().catch(() => ({}))).error || r.statusText);
@@ -18,7 +22,7 @@ export const fetcher = (url: string) =>
   });
 
 export async function post<T = unknown>(url: string, body?: unknown): Promise<T> {
-  const r = await fetch(url, {
+  const r = await fetch(`${BASE_PATH}${url}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: body ? JSON.stringify(body) : undefined,
@@ -32,7 +36,7 @@ export async function post<T = unknown>(url: string, body?: unknown): Promise<T>
 }
 
 export async function patch<T = unknown>(url: string, body?: unknown): Promise<T> {
-  const r = await fetch(url, {
+  const r = await fetch(`${BASE_PATH}${url}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: body ? JSON.stringify(body) : undefined,
