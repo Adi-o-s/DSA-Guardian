@@ -22,6 +22,25 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [GitHub],
   session: { strategy: "jwt" },
   callbacks: {
+    // `baseUrl` here is the bare public ORIGIN (https://adityashrotriya.me), with
+    // no basePath — so a relative redirect like "/" would land on the PORTFOLIO
+    // root, not the app. Force every post-auth redirect to stay under /dsaguardian.
+    async redirect({ url, baseUrl }) {
+      const APP = "/dsaguardian";
+      try {
+        const u = new URL(url, baseUrl);
+        if (u.origin !== baseUrl) return `${baseUrl}${APP}`;
+        const path =
+          u.pathname === "/" || u.pathname === ""
+            ? APP
+            : u.pathname.startsWith(APP)
+              ? u.pathname
+              : `${APP}${u.pathname}`;
+        return `${baseUrl}${path}${u.search}`;
+      } catch {
+        return `${baseUrl}${APP}`;
+      }
+    },
     async jwt({ token, account, profile }) {
       // `account` + `profile` are only present on the initial sign-in.
       if (account && profile) {

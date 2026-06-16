@@ -133,15 +133,61 @@ export async function toggleManual(slug: string): Promise<boolean> {
   return true;
 }
 
+// Bulk upsert recent ACs in ONE round trip. New rows are inserted; existing rows
+// only have solved_at moved FORWARD (so an already-known problem can register as
+// "solved today"). `xmax = 0` distinguishes inserted from updated rows, letting us
+// count genuinely-new slugs. Replaces a SELECT+INSERT per row (the old N+1 path).
+async function bulkRecordRecent(
+  items: { slug: string; ts: number }[]
+): Promise<number> {
+  if (items.length === 0) return 0;
+  const userId = currentUserId();
+  const meta = getMeta();
+  const slugs = items.map((i) => i.slug);
+  const titles = items.map((i) => meta[i.slug]?.title ?? i.slug);
+  const diffs = items.map((i) => meta[i.slug]?.difficulty ?? null);
+  const tss = items.map((i) => i.ts);
+  const rows = await query<{ inserted: boolean }>(
+    `INSERT INTO solved (user_id, slug, title, difficulty, source, solved_at)
+     SELECT $1, s.slug, s.title, s.difficulty, 'recent', s.ts
+     FROM unnest($2::text[], $3::text[], $4::text[], $5::bigint[])
+            AS s(slug, title, difficulty, ts)
+     ON CONFLICT (user_id, slug) DO UPDATE
+       SET solved_at = GREATEST(solved.solved_at, EXCLUDED.solved_at)
+     RETURNING (xmax::text = '0') AS inserted`,
+    [userId, slugs, titles, diffs, tss]
+  );
+  return rows.filter((r) => r.inserted).length;
+}
+
+// Bulk backfill the full solved history in ONE round trip. Full-sync solves never
+// modify existing rows (DO NOTHING) and are stamped in the past so they don't
+// count as "solved today". RETURNING yields only the newly-inserted slugs.
+async function bulkRecordFullSync(slugs: string[]): Promise<number> {
+  if (slugs.length === 0) return 0;
+  const userId = currentUserId();
+  const meta = getMeta();
+  const titles = slugs.map((s) => meta[s]?.title ?? s);
+  const diffs = slugs.map((s) => meta[s]?.difficulty ?? null);
+  const rows = await query<{ slug: string }>(
+    `INSERT INTO solved (user_id, slug, title, difficulty, source, solved_at)
+     SELECT $1, s.slug, s.title, s.difficulty, 'fullsync', $5
+     FROM unnest($2::text[], $3::text[], $4::text[]) AS s(slug, title, difficulty)
+     ON CONFLICT (user_id, slug) DO NOTHING
+     RETURNING slug`,
+    [userId, slugs, titles, diffs, BACKFILL_TS]
+  );
+  return rows.length;
+}
+
 /** Poll public profile (and full sync if a cookie is set) and merge new solves. */
 export async function runSync(): Promise<SyncResult> {
   const username = (await getSetting("username")).trim();
   if (!username) throw new Error("Set your LeetCode username in Settings first.");
 
   const pub = await fetchPublic(username);
-  let added = 0;
   // Recent ACs carry the real submission time → drives "solved today".
-  for (const s of pub.recent) if (await recordSolved(s.slug, "recent", s.ts)) added++;
+  let added = await bulkRecordRecent(pub.recent);
 
   let fullSync = false;
   let warning: string | undefined;
@@ -149,8 +195,7 @@ export async function runSync(): Promise<SyncResult> {
   if (cookieRaw) {
     try {
       const items = await fetchSolvedAuthenticated(normalizeCookie(cookieRaw));
-      for (const it of items)
-        if (await recordSolved(it.slug, "fullsync", BACKFILL_TS)) added++;
+      added += await bulkRecordFullSync(items.map((it) => it.slug));
       fullSync = true;
     } catch (e) {
       warning = `Full sync failed (${(e as Error).message}). Using public data only.`;
