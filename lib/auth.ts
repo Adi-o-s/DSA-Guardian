@@ -11,6 +11,14 @@ import GitHub from "next-auth/providers/github";
 import { upsertUserByGithub } from "./db";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  // Next.js `basePath` is "/dsaguardian", so the auth handler is publicly served
+  // at "/dsaguardian/api/auth/*". Auth.js does NOT infer Next's basePath, so we
+  // must tell it the full public prefix or it builds callback/redirect URLs at
+  // "/api/auth/*" (missing "/dsaguardian") and the OAuth round-trip 404s.
+  basePath: "/dsaguardian/api/auth",
+  // Behind the portfolio's cross-domain rewrite the incoming Host is
+  // dsa-guardian.vercel.app; trust it and rely on AUTH_URL for the public origin.
+  trustHost: true,
   providers: [GitHub],
   session: { strategy: "jwt" },
   callbacks: {

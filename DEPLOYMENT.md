@@ -12,12 +12,14 @@ keeps running on `localhost:3000`. This copy runs on **port 3001** locally.
 ## 2. Create a GitHub OAuth app
 
 1. https://github.com/settings/developers → **New OAuth App**.
-2. For **local dev**:
-   - Homepage URL: `http://localhost:3001`
-   - Authorization callback URL: `http://localhost:3001/api/auth/callback/github`
+2. For **local dev** (note the `/dsaguardian/api/auth` prefix — the app runs under
+   `basePath: "/dsaguardian"` and auth lives at `/dsaguardian/api/auth/*`):
+   - Homepage URL: `http://localhost:3001/dsaguardian`
+   - Authorization callback URL: `http://localhost:3001/dsaguardian/api/auth/callback/github`
 3. Copy the **Client ID** and generate a **Client secret**.
-4. (For production, create a second OAuth app — or add the Vercel URL — with the
-   callback `https://<your-app>.vercel.app/api/auth/callback/github`.)
+4. For **production**, create a second OAuth app (or add a second callback) with:
+   - Homepage URL: `https://adityashrotriya.me/dsaguardian`
+   - Authorization callback URL: `https://adityashrotriya.me/dsaguardian/api/auth/callback/github`
 
 ## 3. Configure environment
 
@@ -28,6 +30,8 @@ cp .env.local.example .env.local
 Fill in `.env.local`:
 - `DATABASE_URL` — the Neon string. (Remove `PGSSL=disable` for Neon; it needs SSL.)
 - `AUTH_SECRET` — `openssl rand -base64 32`
+- `AUTH_URL` — public **origin only**, no path (local: `http://localhost:3001`). The
+  `/dsaguardian/api/auth` prefix lives in `lib/auth.ts` (`basePath`), not here.
 - `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` — from step 2
 - `ENCRYPTION_KEY` — `openssl rand -base64 32` (encrypts the LeetCode cookie at rest)
 
@@ -59,7 +63,20 @@ The import is idempotent (safe to re-run).
 2. Import it at https://vercel.com/new.
 3. Add env vars in the Vercel project (same keys as `.env.local`, but with the
    **production** GitHub OAuth credentials and the Neon `DATABASE_URL`).
+   **`AUTH_URL` must be `https://adityashrotriya.me`** (the public origin users hit
+   through the portfolio rewrite) — NOT the `dsa-guardian.vercel.app` origin, or
+   OAuth redirects/cookies land on the wrong domain and sign-in fails.
 4. Vercel runs `npm run db:migrate && next build` (see `vercel.json`) on deploy.
+
+### Why the portfolio rewrite + basePath needs care
+
+The portfolio (`adityashrotriya.me`) rewrites `/dsaguardian/*` to this app on
+`dsa-guardian.vercel.app`. This app runs under Next `basePath: "/dsaguardian"`,
+which Next **strips** from the request before handlers run. Auth.js is configured
+with `basePath: "/dsaguardian/api/auth"` (in `lib/auth.ts`) so it emits correct
+public URLs, and `app/api/auth/[...nextauth]/route.ts` re-adds the stripped
+`/dsaguardian` prefix so Auth.js can also parse the incoming action. Changing
+either side without the other breaks GitHub sign-in.
 
 ## Data isolation
 
