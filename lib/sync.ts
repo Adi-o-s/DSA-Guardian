@@ -143,10 +143,20 @@ async function bulkRecordRecent(
   if (items.length === 0) return 0;
   const userId = currentUserId();
   const meta = getMeta();
-  const slugs = items.map((i) => i.slug);
-  const titles = items.map((i) => meta[i.slug]?.title ?? i.slug);
-  const diffs = items.map((i) => meta[i.slug]?.difficulty ?? null);
-  const tss = items.map((i) => i.ts);
+  // The recent-AC list can contain the same slug more than once (a user may have
+  // several accepted submissions of one problem in the last 20). Collapse to one
+  // row per slug, keeping the latest ts — otherwise ON CONFLICT DO UPDATE would
+  // try to affect the same (user_id, slug) row twice and Postgres errors out
+  // ("ON CONFLICT DO UPDATE command cannot affect row a second time").
+  const tsBySlug = new Map<string, number>();
+  for (const i of items) {
+    tsBySlug.set(i.slug, Math.max(tsBySlug.get(i.slug) ?? 0, i.ts));
+  }
+  const deduped = [...tsBySlug].map(([slug, ts]) => ({ slug, ts }));
+  const slugs = deduped.map((i) => i.slug);
+  const titles = deduped.map((i) => meta[i.slug]?.title ?? i.slug);
+  const diffs = deduped.map((i) => meta[i.slug]?.difficulty ?? null);
+  const tss = deduped.map((i) => i.ts);
   const rows = await query<{ inserted: boolean }>(
     `INSERT INTO solved (user_id, slug, title, difficulty, source, solved_at)
      SELECT $1, s.slug, s.title, s.difficulty, 'recent', s.ts
