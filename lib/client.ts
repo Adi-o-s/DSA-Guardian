@@ -49,6 +49,20 @@ export async function patch<T = unknown>(url: string, body?: unknown): Promise<T
   return json as T;
 }
 
+export async function del<T = unknown>(url: string, body?: unknown): Promise<T> {
+  const r = await fetch(`${BASE_PATH}${url}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const json = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    handleUnauthorized(r.status);
+    throw new Error(json.error || r.statusText);
+  }
+  return json as T;
+}
+
 export const DIFF_COLOR: Record<string, string> = {
   Easy: "text-easy",
   Medium: "text-medium",

@@ -13,6 +13,7 @@ import {
 import { getMeta, stepTitle } from "./data";
 import { roadmapTopic } from "./roadmap";
 import { computeStreak, markDayProgress } from "./streak";
+import { weakAreaPicks, type WeakPick } from "./stats";
 
 export type ContinueItem = {
   slug: string;
@@ -40,6 +41,8 @@ export type DashboardState = {
   recommendations: Recommendation[];
   continueTopic: { id: number; title: string; roadmap: string | null } | null;
   continueProblems: ContinueItem[];
+  // Next Striver problems drawn from the user's weakest LeetCode tags.
+  weakAreas: WeakPick[];
 };
 
 export async function buildState(): Promise<DashboardState> {
@@ -72,10 +75,11 @@ export async function buildState(): Promise<DashboardState> {
     difficulty: meta[p.slug]?.difficulty ?? null,
   }));
 
-  const [streak, solvedSet, recommendations] = await Promise.all([
+  const [streak, solvedSet, recommendations, weakAreas] = await Promise.all([
     computeStreak(),
     getSolvedSet(),
     pickDaily(date),
+    weakAreaPicks(5),
   ]);
 
   return {
@@ -100,5 +104,6 @@ export async function buildState(): Promise<DashboardState> {
         }
       : null,
     continueProblems,
+    weakAreas,
   };
 }

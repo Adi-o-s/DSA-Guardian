@@ -12,6 +12,7 @@ import {
   AlertTriangle,
   Target,
   PlayCircle,
+  Wrench,
 } from "lucide-react";
 import { fetcher, post, DIFF_COLOR } from "@/lib/client";
 import { GoalRing } from "@/components/GoalRing";
@@ -33,6 +34,14 @@ type ContinueItem = {
   url: string;
   difficulty: string | null;
 };
+type WeakPick = {
+  slug: string;
+  title: string;
+  url: string;
+  difficulty: string | null;
+  tag: string;
+  stepTitle: string;
+};
 type State = {
   username: string;
   configured: boolean;
@@ -49,6 +58,7 @@ type State = {
   recommendations: Rec[];
   continueTopic: { id: number; title: string; roadmap: string | null } | null;
   continueProblems: ContinueItem[];
+  weakAreas: WeakPick[];
 };
 
 const REFRESH_MS = 5 * 60 * 1000;
@@ -267,6 +277,44 @@ export default function Dashboard() {
           </div>
         )}
       </section>
+
+      {/* Shore up weak areas — next Striver problems from the user's weakest tags */}
+      {data.weakAreas.length > 0 && (
+        <section className="space-y-3">
+          <div>
+            <h2 className="text-lg font-semibold flex items-center gap-2">
+              <Wrench className="h-5 w-5 text-medium" />
+              Shore up weak areas
+            </h2>
+            <p className="text-sm text-muted">
+              Next Striver problems from the topics you&apos;ve solved the least.
+            </p>
+          </div>
+          <div className="rounded-xl border border-border bg-panel divide-y divide-border">
+            {data.weakAreas.map((p, i) => (
+              <a
+                key={p.slug}
+                href={p.url}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 px-4 py-2.5 hover:bg-panel2 group"
+              >
+                <span className="text-muted text-sm w-5 tabular-nums">{i + 1}</span>
+                <span className="flex-1 text-sm">{p.title}</span>
+                <span className="text-xs text-muted hidden sm:inline capitalize">
+                  {p.tag.replace(/-/g, " ")}
+                </span>
+                {p.difficulty && (
+                  <span className={`text-xs ${DIFF_COLOR[p.difficulty]}`}>
+                    {p.difficulty}
+                  </span>
+                )}
+                <ExternalLink className="h-4 w-4 text-muted group-hover:text-accent" />
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

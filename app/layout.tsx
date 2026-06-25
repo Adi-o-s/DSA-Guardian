@@ -5,6 +5,8 @@ import {
   LayoutDashboard,
   ListChecks,
   LifeBuoy,
+  BarChart3,
+  Users,
   Settings,
   Github,
   LogOut,
@@ -50,6 +52,12 @@ export default async function RootLayout({
                   </NavLink>
                   <NavLink href="/upsolve" icon={<LifeBuoy className="h-4 w-4" />}>
                     Upsolve
+                  </NavLink>
+                  <NavLink href="/stats" icon={<BarChart3 className="h-4 w-4" />}>
+                    Stats
+                  </NavLink>
+                  <NavLink href="/leaderboard" icon={<Users className="h-4 w-4" />}>
+                    Leaderboard
                   </NavLink>
                   <NavLink href="/settings" icon={<Settings className="h-4 w-4" />}>
                     Settings

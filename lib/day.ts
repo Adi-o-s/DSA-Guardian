@@ -3,17 +3,23 @@
 // (e.g. 330 = IST midnight).
 import { getSetting } from "./db";
 
-async function offsetMinutes(): Promise<number> {
+export async function offsetMinutes(): Promise<number> {
   return parseInt((await getSetting("dayOffsetMinutes")) || "0", 10) || 0;
 }
 
-export async function lcDate(at: number = Date.now()): Promise<string> {
-  const offsetMin = await offsetMinutes();
+/** Map an epoch-ms instant to its LeetCode-day key (YYYY-MM-DD) for a given
+ *  offset. Pure + synchronous so callers that bucket many timestamps (e.g. the
+ *  heatmap) can read the offset once instead of per row. */
+export function epochToLcDate(at: number, offsetMin: number): string {
   const shifted = new Date(at + offsetMin * 60_000);
   const y = shifted.getUTCFullYear();
   const m = String(shifted.getUTCMonth() + 1).padStart(2, "0");
   const d = String(shifted.getUTCDate()).padStart(2, "0");
   return `${y}-${m}-${d}`;
+}
+
+export async function lcDate(at: number = Date.now()): Promise<string> {
+  return epochToLcDate(at, await offsetMinutes());
 }
 
 /** Start-of-day epoch ms for the current LeetCode day (for "solved today"). */

@@ -14,6 +14,7 @@ type SettingsResp = {
     dayOffsetMinutes: string;
     sheetOrder: string;
     selectedCompanies: string;
+    leaderboardPublic: string;
     hasCookie: boolean;
   };
   companies: string[];
@@ -28,6 +29,7 @@ export default function SettingsPage() {
     completionThreshold: "80",
     dayOffsetMinutes: "0",
     sheetOrder: "neetcode",
+    leaderboardPublic: "0",
   });
   const [companies, setCompanies] = useState<Set<string>>(new Set());
   const [cookie, setCookie] = useState("");
@@ -42,6 +44,7 @@ export default function SettingsPage() {
       completionThreshold: data.settings.completionThreshold,
       dayOffsetMinutes: data.settings.dayOffsetMinutes,
       sheetOrder: data.settings.sheetOrder || "neetcode",
+      leaderboardPublic: data.settings.leaderboardPublic || "0",
     });
     setCompanies(
       new Set(
@@ -215,6 +218,22 @@ export default function SettingsPage() {
             </label>
           ))}
         </div>
+      </Field>
+
+      <Field
+        label="Leaderboard"
+        hint="When on, you appear on the global leaderboard with your streak and weekly solves. Friends can always see you once they add you."
+      >
+        <label className="flex items-center gap-2 text-sm cursor-pointer">
+          <input
+            type="checkbox"
+            checked={form.leaderboardPublic === "1"}
+            onChange={(e) =>
+              setForm({ ...form, leaderboardPublic: e.target.checked ? "1" : "0" })
+            }
+          />
+          Show me on the global leaderboard
+        </label>
       </Field>
 
       <Field
