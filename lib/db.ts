@@ -68,7 +68,6 @@ export const DEFAULT_SETTINGS: Record<string, string> = {
   dayOffsetMinutes: "0", // 0 = UTC (LeetCode reset)
   sheetOrder: "neetcode", // 'neetcode' (roadmap flow) | 'a2z' (original order)
   selectedCompanies: "", // comma-separated; empty = all companies
-  leaderboardPublic: "0", // '1' = appear on the global leaderboard
   cookie: "", // LEETCODE_SESSION value for optional full sync (stored ENCRYPTED)
 };
 

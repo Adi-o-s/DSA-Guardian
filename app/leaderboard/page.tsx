@@ -2,21 +2,20 @@
 
 import { useState } from "react";
 import useSWR from "swr";
-import { Flame, Trophy, UserPlus, X, Lock, Users, Globe } from "lucide-react";
+import { Flame, Trophy, UserPlus, X, Users, Globe } from "lucide-react";
 import { fetcher, post, del } from "@/lib/client";
 
 type LeaderRow = {
   userId: string;
   username: string | null;
   image: string | null;
-  streak: number | null;
-  weekly: number | null;
+  streak: number;
+  weekly: number;
   isMe: boolean;
-  isPrivate: boolean;
 };
 type BoardResp = { scope: string; rows: LeaderRow[] };
 type FriendsResp = { friends: { userId: string; username: string | null; image: string | null }[] };
-type SettingsResp = { settings: { leaderboardPublic: string } };
+
 
 export default function LeaderboardPage() {
   const [scope, setScope] = useState<"global" | "friends">("global");
@@ -25,14 +24,9 @@ export default function LeaderboardPage() {
     fetcher
   );
   const { data: friends, mutate: mutateFriends } = useSWR<FriendsResp>("/api/friends", fetcher);
-  const { data: settings, mutate: mutateSettings } = useSWR<SettingsResp>(
-    "/api/settings",
-    fetcher
-  );
 
   const [handle, setHandle] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
-  const optedIn = settings?.settings.leaderboardPublic === "1";
 
   const refresh = () => {
     mutateBoard();
@@ -55,12 +49,6 @@ export default function LeaderboardPage() {
     refresh();
   };
 
-  const toggleOptIn = async () => {
-    await post("/api/settings", { leaderboardPublic: optedIn ? "0" : "1" });
-    mutateSettings();
-    mutateBoard();
-  };
-
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -68,10 +56,6 @@ export default function LeaderboardPage() {
           <Trophy className="h-5 w-5 text-medium" />
           Leaderboard
         </h1>
-        <label className="flex items-center gap-2 text-sm text-muted cursor-pointer">
-          <input type="checkbox" checked={optedIn} onChange={toggleOptIn} />
-          Show me on the global board
-        </label>
       </div>
 
       {/* Tabs */}
@@ -129,8 +113,8 @@ export default function LeaderboardPage() {
         <div className="text-muted">Loading…</div>
       ) : board.rows.length === 0 ? (
         <p className="text-sm text-muted">
-          {scope === "global"
-            ? "No one has opted into the global board yet. Toggle the switch above to be first."
+        {scope === "global"
+            ? "No users found yet. Be the first to sign up!"
             : "You're not following anyone yet. Add a friend by their GitHub username above."}
         </p>
       ) : (
@@ -184,22 +168,13 @@ function Row({ rank, row }: { rank: number; row: LeaderRow }) {
         {row.username ?? "unknown"}
         {row.isMe && <span className="ml-2 text-xs text-accent">you</span>}
       </span>
-      {row.isPrivate ? (
-        <span className="flex items-center gap-1 text-xs text-muted">
-          <Lock className="h-3.5 w-3.5" />
-          private
-        </span>
-      ) : (
-        <>
-          <span className="flex items-center gap-1 text-sm text-medium tabular-nums" title="Current streak">
-            <Flame className="h-4 w-4" />
-            {row.streak}
-          </span>
-          <span className="w-20 text-right text-sm text-muted tabular-nums" title="Solved this week">
-            {row.weekly} / wk
-          </span>
-        </>
-      )}
+      <span className="flex items-center gap-1 text-sm text-medium tabular-nums" title="Current streak">
+        <Flame className="h-4 w-4" />
+        {row.streak}
+      </span>
+      <span className="w-20 text-right text-sm text-muted tabular-nums" title="Solved this week">
+        {row.weekly} / wk
+      </span>
     </div>
   );
 }

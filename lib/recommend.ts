@@ -186,3 +186,17 @@ export async function pickDaily(date: string): Promise<Recommendation[]> {
     })
   );
 }
+
+/**
+ * Shuffle today's hard recommendations: delete all pending (unsolved) picks,
+ * then regenerate fresh ones via pickDaily(). Already-solved ("done") picks
+ * are preserved.
+ */
+export async function shuffleDaily(date: string): Promise<Recommendation[]> {
+  const userId = currentUserId();
+  await query(
+    "DELETE FROM recommendations WHERE user_id = $1 AND lc_date = $2 AND status = 'pending'",
+    [userId, date]
+  );
+  return pickDaily(date);
+}

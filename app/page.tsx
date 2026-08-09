@@ -13,6 +13,7 @@ import {
   Target,
   PlayCircle,
   Wrench,
+  Shuffle,
 } from "lucide-react";
 import { fetcher, post, DIFF_COLOR } from "@/lib/client";
 import { GoalRing } from "@/components/GoalRing";
@@ -70,6 +71,7 @@ export default function Dashboard() {
   const [syncing, setSyncing] = useState(false);
   const [syncMsg, setSyncMsg] = useState<string | null>(null);
   const [showGoal, setShowGoal] = useState(false);
+  const [shuffling, setShuffling] = useState(false);
 
   const sync = useCallback(async () => {
     setSyncing(true);
@@ -241,9 +243,28 @@ export default function Dashboard() {
               ({data.hardSolvedToday}/{data.hardGoal})
             </span>
           </h2>
-          <Link href="/settings" className="text-sm text-accent hover:underline">
-            Change hard goal
-          </Link>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={async () => {
+                setShuffling(true);
+                try {
+                  const res = await post<State>("/api/state/shuffle");
+                  mutate(res, { revalidate: false });
+                } finally {
+                  setShuffling(false);
+                }
+              }}
+              disabled={shuffling}
+              className="flex items-center gap-1.5 rounded-md border border-border bg-panel2 px-2.5 py-1.5 text-sm text-muted hover:text-text hover:bg-border disabled:opacity-50 transition-colors"
+              title="Shuffle for new picks"
+            >
+              <Shuffle className={`h-3.5 w-3.5 ${shuffling ? "animate-spin" : ""}`} />
+              {shuffling ? "Shuffling…" : "Shuffle"}
+            </button>
+            <Link href="/settings" className="text-sm text-accent hover:underline">
+              Change hard goal
+            </Link>
+          </div>
         </div>
 
         {data.completedTopics.length === 0 && (

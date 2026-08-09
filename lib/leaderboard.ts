@@ -1,8 +1,7 @@
 // The ONLY cross-user reads in the app. Everything here exposes safe, public
 // columns only — github_username, avatar, current streak, weekly solve count —
-// never another user's solved list, settings, or cookie. Membership is gated:
-// the global board shows users who set `leaderboardPublic = '1'`; the friends
-// board shows you + people you follow (a one-way edge in `friends`).
+// never another user's solved list, settings, or cookie. The global board shows
+// every registered user; the friends board shows you + people you follow.
 import { currentUserId, query } from "./db";
 import { lcDate, lcDayStart } from "./day";
 
@@ -10,14 +9,12 @@ export type LeaderRow = {
   userId: string;
   username: string | null;
   image: string | null;
-  streak: number | null; // null => private (followed but not opted in)
-  weekly: number | null;
+  streak: number;
+  weekly: number;
   isMe: boolean;
-  isPrivate: boolean;
 };
 
 type Member = { id: string; github_username: string | null; image: string | null };
-type ScoredMember = Member & { optedIn: boolean };
 
 /** userId -> weekly solve count, over the last 7 LeetCode days (all users). */
 async function weeklyCounts(): Promise<Map<string, number>> {
@@ -57,59 +54,43 @@ async function streaks(): Promise<Map<string, number>> {
 }
 
 function rank(rows: LeaderRow[]): LeaderRow[] {
-  return rows.sort((a, b) => {
-    if (a.isPrivate !== b.isPrivate) return a.isPrivate ? 1 : -1;
-    return (b.streak ?? -1) - (a.streak ?? -1) || (b.weekly ?? -1) - (a.weekly ?? -1);
-  });
+  return rows.sort((a, b) => b.streak - a.streak || b.weekly - a.weekly);
 }
 
-// A followed user who hasn't opted in is shown as private (no stats); you always
-// see your own row. Weekly + streak are fetched once for all users, then joined.
-async function assemble(members: ScoredMember[]): Promise<LeaderRow[]> {
+// Weekly + streak are fetched once for all users, then joined.
+async function assemble(members: Member[]): Promise<LeaderRow[]> {
   const me = currentUserId();
   const [weekly, streak] = await Promise.all([weeklyCounts(), streaks()]);
-  const rows = members.map<LeaderRow>((m) => {
-    const isMe = m.id === me;
-    const visible = m.optedIn || isMe;
-    return {
-      userId: m.id,
-      username: m.github_username,
-      image: m.image,
-      isMe,
-      isPrivate: !visible,
-      streak: visible ? streak.get(m.id) ?? 0 : null,
-      weekly: visible ? weekly.get(m.id) ?? 0 : null,
-    };
-  });
+  const rows = members.map<LeaderRow>((m) => ({
+    userId: m.id,
+    username: m.github_username,
+    image: m.image,
+    isMe: m.id === me,
+    streak: streak.get(m.id) ?? 0,
+    weekly: weekly.get(m.id) ?? 0,
+  }));
   return rank(rows);
 }
 
-/** Global board: every user who opted in via leaderboardPublic = '1'. */
+/** Global board: every registered user. */
 export async function globalBoard(): Promise<LeaderRow[]> {
   const members = await query<Member>(
-    `SELECT u.id, u.github_username, u.image
-     FROM users u
-     JOIN settings s
-       ON s.user_id = u.id AND s.key = 'leaderboardPublic' AND s.value = '1'`
+    `SELECT id, github_username, image FROM users`
   );
-  return assemble(members.map((m) => ({ ...m, optedIn: true })));
+  return assemble(members);
 }
 
-/** Friends board: you + everyone you follow. Non-opted-in follows show private. */
+/** Friends board: you + everyone you follow. */
 export async function friendsBoard(): Promise<LeaderRow[]> {
   const me = currentUserId();
-  const members = await query<Member & { opted_in: boolean }>(
-    `SELECT u.id, u.github_username, u.image,
-            EXISTS (
-              SELECT 1 FROM settings s
-              WHERE s.user_id = u.id AND s.key = 'leaderboardPublic' AND s.value = '1'
-            ) AS opted_in
+  const members = await query<Member>(
+    `SELECT u.id, u.github_username, u.image
      FROM users u
      WHERE u.id = $1
         OR u.id IN (SELECT friend_id FROM friends WHERE user_id = $1)`,
     [me]
   );
-  return assemble(members.map((m) => ({ ...m, optedIn: m.opted_in })));
+  return assemble(members);
 }
 
 // ---- friend (follow) management — scoped to the acting user ----

@@ -23,7 +23,7 @@ const EDITABLE = new Set([
   "dayOffsetMinutes",
   "sheetOrder",
   "selectedCompanies",
-  "leaderboardPublic",
+
   "cookie",
 ]);
 
@@ -43,7 +43,7 @@ export async function GET() {
         dayOffsetMinutes: s.dayOffsetMinutes,
         sheetOrder: s.sheetOrder,
         selectedCompanies: s.selectedCompanies,
-        leaderboardPublic: s.leaderboardPublic,
+
         hasCookie: await hasCookie(),
       },
       companies: allCompanies(),
