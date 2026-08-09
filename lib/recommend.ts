@@ -62,8 +62,20 @@ export async function setGoal(date: string, goal: number): Promise<void> {
 
 type Candidate = { slug: string; stepId: number; fallback: boolean; freq: number };
 
+function arrayShuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 /** Ordered Hard candidates from completed topics, then in-progress topics as fallback. */
-async function buildCandidates(exclude: Set<string>): Promise<Candidate[]> {
+async function buildCandidates(
+  exclude: Set<string>,
+  shuffle: boolean = false
+): Promise<Candidate[]> {
   const solved = await getSolvedSet();
   const completed = await completedStepIds();
   // in-progress = touched but not complete (used only for fallback)
@@ -94,6 +106,10 @@ async function buildCandidates(exclude: Set<string>): Promise<Candidate[]> {
     if (stepProg !== null) {
       fallback.push({ slug, stepId: stepProg, fallback: true, freq });
     }
+  }
+
+  if (shuffle) {
+    return [...arrayShuffle(primary), ...arrayShuffle(fallback)];
   }
   primary.sort((a, b) => b.freq - a.freq);
   fallback.sort((a, b) => b.freq - a.freq);
@@ -126,7 +142,11 @@ async function enrich(
  * Returns today's stable recommendations, generating/topping-up to `goal` picks
  * and marking any that have since been solved as done.
  */
-export async function pickDaily(date: string): Promise<Recommendation[]> {
+export async function pickDaily(
+  date: string,
+  extraExclude: Set<string> = new Set(),
+  shuffle: boolean = false
+): Promise<Recommendation[]> {
   await ensureDaily(date);
   const userId = currentUserId();
   const target = parseInt((await getSetting("hardGoal")) || "2", 10) || 2;
@@ -155,8 +175,15 @@ export async function pickDaily(date: string): Promise<Recommendation[]> {
 
   // Top up to the Hard goal with fresh candidates (don't disturb existing picks).
   if (stored.length < target) {
-    const have = new Set(stored.map((r) => r.slug));
-    const candidates = await buildCandidates(have);
+    const have = new Set([...stored.map((r) => r.slug), ...extraExclude]);
+    let candidates = await buildCandidates(have, shuffle);
+
+    // Fallback: if excluding extraExclude left us with fewer candidates than needed, retry without extraExclude
+    if (candidates.length < target - stored.length && extraExclude.size > 0) {
+      const fallbackHave = new Set(stored.map((r) => r.slug));
+      candidates = await buildCandidates(fallbackHave, shuffle);
+    }
+
     for (const c of candidates) {
       if (stored.length >= target) break;
       await query(
@@ -194,9 +221,15 @@ export async function pickDaily(date: string): Promise<Recommendation[]> {
  */
 export async function shuffleDaily(date: string): Promise<Recommendation[]> {
   const userId = currentUserId();
+  const pending = await query<{ slug: string }>(
+    "SELECT slug FROM recommendations WHERE user_id = $1 AND lc_date = $2 AND status = 'pending'",
+    [userId, date]
+  );
+  const pendingSlugs = new Set(pending.map((p) => p.slug));
+
   await query(
     "DELETE FROM recommendations WHERE user_id = $1 AND lc_date = $2 AND status = 'pending'",
     [userId, date]
   );
-  return pickDaily(date);
+  return pickDaily(date, pendingSlugs, true);
 }
