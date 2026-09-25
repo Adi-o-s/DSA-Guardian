@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "@/lib/cn";
+
 // GitHub-style contribution grid. Pure presentational: takes zero-filled daily
 // counts (oldest → newest, last cell = today) and lays them out in week columns.
 export type HeatCell = { date: string; count: number };
@@ -16,13 +18,13 @@ function utcDay(date: string): number {
   return new Date(`${date}T00:00:00Z`).getUTCDay(); // 0 = Sun
 }
 
-// 5 intensity levels using the "easy"/solved green (#22c55e).
-function fill(count: number): string {
-  if (count <= 0) return "#1b2230"; // panel2
-  if (count === 1) return "rgba(34,197,94,0.35)";
-  if (count === 2) return "rgba(34,197,94,0.55)";
-  if (count === 3) return "rgba(34,197,94,0.78)";
-  return "#22c55e";
+// 5 intensity levels off the success token, so the grid re-themes with the app.
+function fillClass(count: number): string {
+  if (count <= 0) return "fill-surface-sunken";
+  if (count === 1) return "fill-success/30";
+  if (count === 2) return "fill-success/50";
+  if (count === 3) return "fill-success/75";
+  return "fill-success";
 }
 
 export function Heatmap({ data }: { data: HeatCell[] }) {
@@ -42,7 +44,8 @@ export function Heatmap({ data }: { data: HeatCell[] }) {
         width={CELL}
         height={CELL}
         rx={2}
-        fill={fill(cell.count)}
+        className={cn(fillClass(cell.count), "stroke-line/50")}
+        strokeWidth={0.5}
       >
         <title>
           {cell.count} solved · {cell.date}
@@ -65,8 +68,8 @@ export function Heatmap({ data }: { data: HeatCell[] }) {
           key={`m${i}`}
           x={PAD_LEFT + col * STEP}
           y={PAD_TOP - 6}
-          fill="#8b97ad"
-          fontSize={9}
+          fontSize={10}
+          className="fill-fg-muted"
         >
           {MONTHS[month]}
         </text>
@@ -84,13 +87,13 @@ export function Heatmap({ data }: { data: HeatCell[] }) {
   const height = PAD_TOP + 7 * STEP;
 
   return (
-    <div className="overflow-x-auto">
+    <div className="-mx-1 overflow-x-auto px-1">
       <svg
         width={width}
         height={height}
         viewBox={`0 0 ${width} ${height}`}
         role="img"
-        aria-label="Daily solve activity"
+        aria-label="Daily solve activity over the last year"
       >
         {monthLabels}
         {weekdays.map((w) => (
@@ -98,14 +101,37 @@ export function Heatmap({ data }: { data: HeatCell[] }) {
             key={w.label}
             x={0}
             y={PAD_TOP + w.row * STEP + CELL - 1}
-            fill="#8b97ad"
-            fontSize={9}
+            fontSize={10}
+            className="fill-fg-muted"
           >
             {w.label}
           </text>
         ))}
         {rects}
       </svg>
+    </div>
+  );
+}
+
+/** Legend for the intensity ramp. */
+export function HeatmapLegend() {
+  return (
+    <div className="flex items-center gap-1.5 text-xs text-fg-muted">
+      <span>Less</span>
+      <svg width={78} height={12} aria-hidden="true">
+        {[0, 1, 2, 3, 4].map((n, i) => (
+          <rect
+            key={n}
+            x={i * 15}
+            y={0}
+            width={11}
+            height={11}
+            rx={2}
+            className={fillClass(n)}
+          />
+        ))}
+      </svg>
+      <span>More</span>
     </div>
   );
 }

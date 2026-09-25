@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import Link from "next/link";
 import {
   LifeBuoy,
   ExternalLink,
@@ -15,8 +14,16 @@ import {
   AlertTriangle,
   Search,
 } from "lucide-react";
-import { post, patch, DIFF_COLOR } from "@/lib/client";
-import { GoalRing } from "@/components/GoalRing";
+import { fetcher, post, patch } from "@/lib/client";
+import { cn } from "@/lib/cn";
+import {
+  Badge,
+  Button,
+  Card,
+  ErrorState,
+  PageHeader,
+} from "@/components/ui";
+import { DifficultyPill, GoalRing } from "@/components/app";
 
 type Video = { title: string; channel: string; url: string };
 type Practice = {
@@ -77,7 +84,10 @@ export default function UpsolvePage() {
 
   const build = useCallback(async (raw: string) => {
     const value = raw.trim();
-    if (!value) return;
+    if (!value) {
+      setError("Enter a contest slug or URL first.");
+      return;
+    }
     setLoading(true);
     setError(null);
     try {
@@ -101,8 +111,7 @@ export default function UpsolvePage() {
     }
   }, [build]);
 
-  const conqueredCount =
-    plan?.questions.filter((q) => q.conquered).length ?? 0;
+  const conqueredCount = plan?.questions.filter((q) => q.conquered).length ?? 0;
 
   const updateQuestion = (qslug: string, patchObj: Partial<Question>) => {
     setPlan((p) =>
@@ -118,100 +127,93 @@ export default function UpsolvePage() {
   };
 
   return (
-    <div className="space-y-8">
-      {/* Intro */}
-      <section className="rounded-xl border border-border bg-panel p-6 space-y-4">
-        <div>
-          <h1 className="text-xl font-semibold flex items-center gap-2">
-            <LifeBuoy className="h-5 w-5 text-accent" />
-            Upsolving Dashboard
-          </h1>
-          <p className="text-sm text-muted mt-1">
-            Missed a few in a contest? That&apos;s where the real learning is. Drop
-            in the contest and we&apos;ll build a calm, step-by-step recovery
-            plan — one concept at a time.
-          </p>
-        </div>
+    <div className="space-y-7">
+      <PageHeader
+        title={
+          <span className="flex items-center gap-2">
+            <LifeBuoy className="h-5 w-5 text-brand" aria-hidden="true" />
+            Upsolving
+          </span>
+        }
+        description="Missed a few in a contest? That's where the real learning is. Drop the contest in and Guardian builds a calm, step-by-step recovery plan."
+      />
 
+      <Card className="space-y-3 p-5">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             build(slug);
           }}
-          className="flex flex-col sm:flex-row gap-2"
+          className="flex flex-col gap-2 sm:flex-row"
         >
           <input
             value={slug}
             onChange={(e) => setSlug(e.target.value)}
             placeholder="weekly-contest-380  (or paste the contest URL)"
-            className="flex-1 rounded-md bg-panel2 border border-border px-3 py-2 text-sm"
+            aria-label="Contest slug or URL"
+            className="input flex-1"
           />
-          <button
+          <Button
             type="submit"
-            disabled={loading}
-            className="flex items-center justify-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
+            variant="primary"
+            loading={loading}
+            icon={<Search className="h-4 w-4" aria-hidden="true" />}
           >
-            <Search className={`h-4 w-4 ${loading ? "animate-pulse" : ""}`} />
-            {loading ? "Building…" : "Build recovery plan"}
-          </button>
+            {loading ? "Building" : "Build recovery plan"}
+          </Button>
         </form>
-        <p className="text-xs text-muted">
-          Find the slug in the contest URL, e.g.{" "}
-          <code className="text-text">leetcode.com/contest/weekly-contest-380</code>
-          .
+        <p className="text-xs text-fg-muted">
+          The slug is the last part of the contest URL, e.g.{" "}
+          <code className="font-mono text-fg">leetcode.com/contest/weekly-contest-380</code>
         </p>
-      </section>
+      </Card>
 
       {error && (
-        <div className="rounded-xl border border-hard/40 bg-hard/5 p-6 space-y-3">
-          <p className="font-medium text-hard flex items-center gap-2">
-            <AlertTriangle className="h-4 w-4" />
-            Couldn&apos;t load that contest
-          </p>
-          <p className="text-sm text-muted">{error}</p>
-          <button
-            onClick={() => build(slug)}
-            className="rounded-md bg-panel2 border border-border px-3 py-2 text-sm"
-          >
-            Retry
-          </button>
-        </div>
+        <ErrorState
+          title="Couldn't load that contest"
+          message={error}
+          onRetry={() => build(slug)}
+        />
       )}
 
       {plan && (
         <>
-          {/* Summary */}
-          <section className="rounded-xl border border-border bg-panel p-6 flex flex-col sm:flex-row items-center gap-6">
+          <Card className="flex flex-col items-center gap-6 p-5 sm:flex-row">
             {plan.questions.length > 0 && (
               <GoalRing
                 value={conqueredCount}
                 goal={plan.questions.length}
                 label="conquered"
-                metLabel="All conquered 🎉"
+                metLabel="All conquered"
                 size={110}
-                color="#22c55e"
+                tone="success"
               />
             )}
-            <div className="flex-1">
-              <h2 className="text-lg font-semibold">{plan.contestTitle}</h2>
-              <p className="text-sm text-muted mt-1">
-                {plan.solvedCount}/{plan.total} solved in-contest ·{" "}
-                {plan.questions.length} to upsolve · {conqueredCount} conquered
+            <div className="min-w-0 flex-1 text-center sm:text-left">
+              <h2 className="text-lg font-semibold tracking-tight text-fg">
+                {plan.contestTitle}
+              </h2>
+              <p className="mt-1 text-sm text-fg-muted">
+                <span className="num">
+                  {plan.solvedCount}/{plan.total}
+                </span>{" "}
+                solved in-contest · <span className="num">{plan.questions.length}</span> to
+                upsolve · <span className="num">{conqueredCount}</span> conquered
               </p>
             </div>
-          </section>
+          </Card>
 
           {plan.questions.length === 0 ? (
-            <section className="rounded-xl border border-easy/40 bg-easy/5 p-8 text-center space-y-2">
-              <Sparkles className="h-8 w-8 text-easy mx-auto" />
-              <h3 className="text-lg font-semibold">Clean sweep! 🎉</h3>
-              <p className="text-muted text-sm">
-                You&apos;ve already solved every problem in this contest. Nothing
-                left to upsolve — go pick your next challenge.
+            <Card className="space-y-2 border-success/40 bg-success/5 p-8 text-center">
+              <Sparkles className="mx-auto h-8 w-8 text-success" aria-hidden="true" />
+              <h3 className="text-lg font-semibold text-fg">Clean sweep</h3>
+              <p className="text-sm text-fg-muted">
+                You already solved every problem in this contest. Nothing left to
+                upsolve — go pick your next challenge.
               </p>
-            </section>
+            </Card>
           ) : (
-            <div className="space-y-5">
+            <div className="space-y-4">
               {plan.questions.map((q, i) => (
                 <RecoveryCard
                   key={q.slug}
@@ -268,163 +270,156 @@ function RecoveryCard({
   };
 
   return (
-    <section
-      className={`rounded-xl border p-5 space-y-4 transition-colors ${
-        q.conquered ? "border-easy/40 bg-easy/5" : "border-border bg-panel"
-      }`}
+    <Card
+      as="section"
+      className={cn(
+        "space-y-4 p-5 transition-colors",
+        q.conquered && "border-success/40 bg-success/5"
+      )}
     >
-      {/* Header */}
       <div className="flex items-start justify-between gap-3">
-        <div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-muted tabular-nums">Q{index + 1}</span>
-            <span className={`text-xs font-semibold ${DIFF_COLOR[q.difficulty] ?? "text-muted"}`}>
-              {q.difficulty}
-            </span>
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="num text-xs text-fg-subtle">Q{index + 1}</span>
+            <DifficultyPill difficulty={q.difficulty} />
             {q.credit > 0 && (
-              <span className="text-xs text-muted">· {q.credit} pts</span>
+              <span className="num text-xs text-fg-subtle">{q.credit} pts</span>
             )}
+            {q.conquered && <Badge tone="success">Conquered</Badge>}
           </div>
-          <h3 className="text-base font-semibold mt-0.5">{q.title}</h3>
+          <h3 className="mt-1 text-md font-semibold text-fg">{q.title}</h3>
         </div>
         <button
           onClick={toggleAttempted}
-          className={`shrink-0 flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-xs transition-colors ${
+          aria-pressed={q.attempted}
+          className={cn(
+            "flex shrink-0 items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-xs transition-colors",
             q.attempted
-              ? "border-accent/40 bg-accent/10 text-accent"
-              : "border-border bg-panel2 text-muted hover:text-text"
-          }`}
+              ? "border-brand/40 bg-brand/10 text-brand"
+              : "border-line bg-surface-overlay text-fg-muted hover:text-fg"
+          )}
           title="Did you attempt this during the contest?"
         >
           {q.attempted ? (
-            <CheckCircle2 className="h-3.5 w-3.5" />
+            <CheckCircle2 className="h-3.5 w-3.5" aria-hidden="true" />
           ) : (
-            <Circle className="h-3.5 w-3.5" />
+            <Circle className="h-3.5 w-3.5" aria-hidden="true" />
           )}
           I attempted this
         </button>
       </div>
 
-      {/* Step 1: Learn the concept */}
-      <StepBlock
-        n={1}
-        title="Learn the concept"
-        icon={<GraduationCap className="h-4 w-4" />}
-        active
-      >
-        {q.tagsPending ? (
-          <TagsPending q={q} onChange={onChange} />
-        ) : (
-          <>
-            <div className="flex flex-wrap gap-1.5 mb-3">
-              {q.tags.map((t) => (
-                <span
-                  key={t}
-                  className="rounded bg-panel2 border border-border px-1.5 py-0.5 text-[11px] text-muted capitalize"
-                >
-                  {t.replace(/-/g, " ")}
-                </span>
-              ))}
-            </div>
-            <VideoList videos={q.videos} />
-          </>
-        )}
-        {unlocked < 2 && (
-          <button
-            onClick={() => setUnlocked(2)}
-            className="mt-3 text-sm text-accent hover:underline"
-          >
-            Got the concept → show practice
-          </button>
-        )}
-      </StepBlock>
-
-      {/* Step 2: Practice similar */}
-      {unlocked >= 2 && (
+      <ol className="space-y-3">
         <StepBlock
-          n={2}
-          title="Practice on fresh problems"
-          icon={<Dumbbell className="h-4 w-4" />}
-          active
+          n={1}
+          title="Learn the concept"
+          icon={<GraduationCap className="h-4 w-4" aria-hidden="true" />}
+          done={unlocked > 1}
         >
-          {q.practice.length === 0 ? (
-            <p className="text-sm text-muted">
-              No close matches found for these tags. Head straight to the contest
-              problem below — you&apos;ve got the concept now.
-            </p>
+          {q.tagsPending ? (
+            <TagsPending q={q} onChange={onChange} />
           ) : (
-            <div className="rounded-lg border border-border bg-panel2 divide-y divide-border">
-              {q.practice.map((p) => (
-                <a
-                  key={p.slug}
-                  href={p.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 px-3 py-2.5 hover:bg-border group"
-                >
-                  {p.solved ? (
-                    <CheckCircle2 className="h-4 w-4 text-easy shrink-0" />
-                  ) : (
-                    <Circle className="h-4 w-4 text-muted shrink-0" />
-                  )}
-                  <span className="flex-1 text-sm">{p.title}</span>
-                  <span className={`text-xs ${DIFF_COLOR[p.difficulty] ?? "text-muted"}`}>
-                    {p.difficulty}
+            <>
+              <div className="mb-3 flex flex-wrap gap-1.5">
+                {q.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded border border-line bg-surface-overlay px-1.5 py-0.5 text-2xs capitalize text-fg-muted"
+                  >
+                    {t.replace(/-/g, " ")}
                   </span>
-                  <ExternalLink className="h-4 w-4 text-muted group-hover:text-accent" />
-                </a>
-              ))}
-            </div>
+                ))}
+              </div>
+              <VideoList videos={q.videos} />
+            </>
           )}
-          {unlocked < 3 && (
-            <button
-              onClick={() => setUnlocked(3)}
-              className="mt-3 text-sm text-accent hover:underline"
-            >
-              Ready → go conquer the contest problem
-            </button>
+          {unlocked < 2 && (
+            <Button size="sm" className="mt-3" onClick={() => setUnlocked(2)}>
+              Got the concept — show practice
+            </Button>
           )}
         </StepBlock>
-      )}
 
-      {/* Step 3: Conquer */}
-      {unlocked >= 3 && (
-        <StepBlock
-          n={3}
-          title="Conquer the contest problem"
-          icon={<Trophy className="h-4 w-4" />}
-          active
-        >
-          <p className="text-sm text-muted mb-3">
-            You&apos;ve learned it and practiced it. Time to finish what the
-            contest started — you&apos;ve got this. 💪
-          </p>
-          <div className="flex flex-wrap items-center gap-2">
-            <a
-              href={`https://leetcode.com/problems/${q.slug}/`}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 rounded-md bg-panel2 border border-border px-3 py-2 text-sm hover:bg-border"
-            >
-              <PlayCircle className="h-4 w-4 text-accent" />
-              Open the problem
-            </a>
-            <button
-              onClick={toggleConquered}
-              disabled={busy}
-              className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium disabled:opacity-50 ${
-                q.conquered
-                  ? "bg-easy/15 text-easy border border-easy/40"
-                  : "bg-easy text-white hover:opacity-90"
-              }`}
-            >
-              <CheckCircle2 className="h-4 w-4" />
-              {q.conquered ? "Conquered ✓ (undo)" : "Mark conquered"}
-            </button>
-          </div>
-        </StepBlock>
-      )}
-    </section>
+        {unlocked >= 2 && (
+          <StepBlock
+            n={2}
+            title="Practice on fresh problems"
+            icon={<Dumbbell className="h-4 w-4" aria-hidden="true" />}
+            done={unlocked > 2}
+          >
+            {q.practice.length === 0 ? (
+              <p className="text-sm text-fg-muted">
+                No close matches for these tags. Head straight to the contest problem
+                below — you have the concept now.
+              </p>
+            ) : (
+              <div className="divide-y divide-line overflow-hidden rounded-lg border border-line">
+                {q.practice.map((p) => (
+                  <a
+                    key={p.slug}
+                    href={p.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex items-center gap-3 bg-surface-raised px-3 py-2.5 transition-colors hover:bg-surface-overlay"
+                  >
+                    {p.solved ? (
+                      <CheckCircle2 className="h-4 w-4 shrink-0 text-success" aria-label="Solved" />
+                    ) : (
+                      <Circle className="h-4 w-4 shrink-0 text-fg-subtle" aria-hidden="true" />
+                    )}
+                    <span className="min-w-0 flex-1 truncate text-sm text-fg">{p.title}</span>
+                    <DifficultyPill difficulty={p.difficulty} />
+                    <ExternalLink
+                      className="h-4 w-4 shrink-0 text-fg-subtle transition-colors group-hover:text-brand"
+                      aria-hidden="true"
+                    />
+                  </a>
+                ))}
+              </div>
+            )}
+            {unlocked < 3 && (
+              <Button size="sm" className="mt-3" onClick={() => setUnlocked(3)}>
+                Ready — go conquer it
+              </Button>
+            )}
+          </StepBlock>
+        )}
+
+        {unlocked >= 3 && (
+          <StepBlock
+            n={3}
+            title="Conquer the contest problem"
+            icon={<Trophy className="h-4 w-4" aria-hidden="true" />}
+            done={q.conquered}
+          >
+            <p className="mb-3 text-sm text-fg-muted">
+              You&apos;ve learned it and practised it. Time to finish what the contest
+              started.
+            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              <a
+                href={`https://leetcode.com/problems/${q.slug}/`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-9 items-center gap-2 rounded-md border border-line bg-surface-overlay px-3.5 text-sm text-fg transition-colors hover:border-line-strong"
+              >
+                <PlayCircle className="h-4 w-4 text-brand" aria-hidden="true" />
+                Open the problem
+              </a>
+              <Button
+                variant={q.conquered ? "secondary" : "primary"}
+                onClick={toggleConquered}
+                loading={busy}
+                icon={<CheckCircle2 className="h-4 w-4" aria-hidden="true" />}
+                className={q.conquered ? "border-success/40 bg-success/10 text-success" : ""}
+              >
+                {q.conquered ? "Conquered — undo" : "Mark conquered"}
+              </Button>
+            </div>
+          </StepBlock>
+        )}
+      </ol>
+    </Card>
   );
 }
 
@@ -441,13 +436,12 @@ function TagsPending({
     if (!tag) return;
     setPicking(true);
     try {
-      const res = await fetch(
-        `/api/contest?questionSlug=${encodeURIComponent(
-          q.slug
-        )}&tag=${encodeURIComponent(tag)}&difficulty=${encodeURIComponent(
-          q.difficulty
-        )}`
-      ).then((r) => r.json());
+      // Goes through the shared fetcher so the basePath prefix is applied.
+      const res = await fetcher(
+        `/api/contest?questionSlug=${encodeURIComponent(q.slug)}&tag=${encodeURIComponent(
+          tag
+        )}&difficulty=${encodeURIComponent(q.difficulty)}`
+      );
       onChange({
         tags: res.tags,
         tagsPending: false,
@@ -461,20 +455,21 @@ function TagsPending({
 
   return (
     <div className="space-y-3">
-      <div className="rounded-lg border border-medium/40 bg-medium/10 p-3 text-sm text-muted flex gap-2">
-        <AlertTriangle className="h-4 w-4 text-medium shrink-0 mt-0.5" />
+      <div className="flex gap-2 rounded-lg border border-warning/30 bg-warning/10 p-3 text-sm text-fg-muted">
+        <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-warning" aria-hidden="true" />
         <span>
-          LeetCode hasn&apos;t published tags for this brand-new problem yet. Pick
-          the topic you think it tests and we&apos;ll tailor the plan — or come
-          back later once tags are live.
+          LeetCode hasn&apos;t published tags for this brand-new problem yet. Pick the
+          topic you think it tests and Guardian will tailor the plan — or come back
+          later once tags are live.
         </span>
       </div>
       <div className="flex items-center gap-2">
         <select
           defaultValue=""
           disabled={picking}
+          aria-label="Choose a topic for this problem"
           onChange={(e) => pickTopic(e.target.value)}
-          className="rounded-md bg-panel2 border border-border px-3 py-2 text-sm"
+          className="input w-auto"
         >
           <option value="" disabled>
             Choose a topic…
@@ -485,9 +480,8 @@ function TagsPending({
             </option>
           ))}
         </select>
-        {picking && <span className="text-xs text-muted">Loading…</span>}
+        {picking && <span className="text-xs text-fg-muted">Loading…</span>}
       </div>
-      {/* Default "how to upsolve" videos are always available. */}
       <VideoList videos={q.videos} />
     </div>
   );
@@ -495,7 +489,7 @@ function TagsPending({
 
 function VideoList({ videos }: { videos: Video[] }) {
   if (videos.length === 0)
-    return <p className="text-sm text-muted">No videos available.</p>;
+    return <p className="text-sm text-fg-muted">No videos available.</p>;
   return (
     <div className="grid gap-2 sm:grid-cols-2">
       {videos.map((v) => (
@@ -504,14 +498,17 @@ function VideoList({ videos }: { videos: Video[] }) {
           href={v.url}
           target="_blank"
           rel="noreferrer"
-          className="flex items-start gap-2 rounded-lg border border-border bg-panel2 p-3 hover:border-accent/60 group"
+          className="group flex items-start gap-2 rounded-lg border border-line bg-surface-overlay p-3 transition-colors hover:border-brand/60"
         >
-          <PlayCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+          <PlayCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
           <span className="min-w-0">
-            <span className="block text-sm leading-snug">{v.title}</span>
-            <span className="block text-xs text-muted mt-0.5">{v.channel}</span>
+            <span className="block text-sm leading-snug text-fg">{v.title}</span>
+            <span className="mt-0.5 block text-xs text-fg-muted">{v.channel}</span>
           </span>
-          <ExternalLink className="h-3.5 w-3.5 text-muted group-hover:text-accent ml-auto shrink-0" />
+          <ExternalLink
+            className="ml-auto h-3.5 w-3.5 shrink-0 text-fg-subtle transition-colors group-hover:text-brand"
+            aria-hidden="true"
+          />
         </a>
       ))}
     </div>
@@ -522,31 +519,32 @@ function StepBlock({
   n,
   title,
   icon,
-  active,
+  done,
   children,
 }: {
   n: number;
   title: string;
   icon: React.ReactNode;
-  active?: boolean;
+  done?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-lg border border-border bg-panel2/40 p-4">
-      <div className="flex items-center gap-2 mb-3">
+    <li className="rounded-lg border border-line bg-surface-overlay/40 p-4">
+      <div className="mb-3 flex items-center gap-2">
         <span
-          className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-semibold ${
-            active ? "bg-accent text-white" : "bg-panel2 text-muted"
-          }`}
+          className={cn(
+            "num grid h-6 w-6 place-items-center rounded-full text-xs font-semibold",
+            done ? "bg-success text-brand-fg" : "bg-brand text-brand-fg"
+          )}
         >
-          {n}
+          {done ? <CheckCircle2 className="h-3.5 w-3.5" aria-hidden="true" /> : n}
         </span>
-        <span className="flex items-center gap-1.5 text-sm font-medium">
+        <span className="flex items-center gap-1.5 text-sm font-medium text-fg">
           {icon}
           {title}
         </span>
       </div>
       <div className="pl-8">{children}</div>
-    </div>
+    </li>
   );
 }
