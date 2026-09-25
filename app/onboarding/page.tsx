@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Upload, CheckCircle2, ArrowRight } from "lucide-react";
 import { post } from "@/lib/client";
+import { Card, PageHeader } from "@/components/ui";
 
 type Summary = {
   settings: number;
@@ -39,38 +40,36 @@ export default function Onboarding() {
   }
 
   return (
-    <div className="max-w-xl mx-auto">
-      <h1 className="text-2xl font-semibold">Import your existing history</h1>
-      <p className="mt-2 text-sm text-muted">
-        Bring your solved problems, streaks, goals, and settings from the local
-        version of DSA Guardian. This is optional and safe to skip — and it never
-        touches your local app.
-      </p>
+    <div className="mx-auto max-w-xl">
+      <PageHeader
+        title="Import your existing history"
+        description="Bring your solved problems, streaks, goals and settings over from the local version of DSA Guardian. Optional, safe to skip, and it never touches your local app."
+      />
 
-      <div className="mt-6 rounded-lg border border-border bg-panel/60 p-5 text-sm">
-        <p className="font-medium">How to get your snapshot file</p>
-        <ol className="mt-2 list-decimal list-inside space-y-1 text-muted">
+      <Card className="mt-6 p-5 text-sm">
+        <p className="font-medium text-fg">How to get your snapshot file</p>
+        <ol className="mt-2 list-inside list-decimal space-y-1 text-fg-muted">
           <li>
             In the cloud project folder, run:
-            <code className="block mt-1 rounded bg-panel2 px-2 py-1 text-xs">
+            <code className="mt-1 block rounded bg-surface-sunken px-2 py-1 font-mono text-xs text-fg">
               node scripts/export-local.mjs &quot;/path/to/DSA Guardian/data/guardian.db&quot;
             </code>
           </li>
           <li>
-            It writes <code>guardian-export.json</code> (your local DB is read
-            only — untouched).
+            It writes <code className="font-mono text-fg">guardian-export.json</code>
+            — your local database is opened read-only and left untouched.
           </li>
           <li>Upload that file below.</li>
         </ol>
-      </div>
+      </Card>
 
       {summary ? (
-        <div className="mt-6 rounded-lg border border-border bg-panel/60 p-5">
-          <div className="flex items-center gap-2 text-easy">
+        <Card className="mt-6 p-5">
+          <div className="flex items-center gap-2 text-success">
             <CheckCircle2 className="h-5 w-5" />
             <span className="font-medium">Import complete</span>
           </div>
-          <ul className="mt-3 text-sm text-muted grid grid-cols-2 gap-1">
+          <ul className="num mt-3 grid grid-cols-2 gap-1 text-sm text-fg-muted">
             <li>Solved: {summary.solved}</li>
             <li>Daily records: {summary.daily}</li>
             <li>Recommendations: {summary.recommendations}</li>
@@ -79,16 +78,16 @@ export default function Onboarding() {
           </ul>
           <Link
             href="/"
-            className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-accent px-4 py-2 text-sm font-medium text-black hover:opacity-90"
+            className="mt-4 inline-flex items-center gap-1.5 rounded-md bg-brand px-4 py-2 text-sm font-medium text-brand-fg transition-all hover:brightness-110"
           >
-            Go to dashboard <ArrowRight className="h-4 w-4" />
+            Go to dashboard <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
-        </div>
+        </Card>
       ) : (
         <div className="mt-6">
-          <label className="flex items-center justify-center gap-2 rounded-md border border-dashed border-border bg-panel/40 px-4 py-6 cursor-pointer hover:bg-panel2 transition-colors">
-            <Upload className="h-4 w-4" />
-            <span className="text-sm">
+          <label className="flex cursor-pointer items-center justify-center gap-2 rounded-card border border-dashed border-line bg-surface-raised/50 px-4 py-8 transition-colors hover:bg-surface-overlay">
+            <Upload className="h-4 w-4 text-fg-muted" aria-hidden="true" />
+            <span className="text-sm text-fg">
               {busy ? "Importing…" : "Choose guardian-export.json"}
             </span>
             <input
@@ -100,11 +99,11 @@ export default function Onboarding() {
             />
           </label>
           {error ? (
-            <p className="mt-3 text-sm text-hard">{error}</p>
+            <p role="alert" className="mt-3 text-sm text-danger">{error}</p>
           ) : null}
           <Link
             href="/"
-            className="mt-4 inline-block text-sm text-muted hover:text-text"
+            className="mt-4 inline-block text-sm text-fg-muted transition-colors hover:text-fg"
           >
             Skip for now →
           </Link>

@@ -64,7 +64,7 @@ export async function del<T = unknown>(url: string, body?: unknown): Promise<T> 
 }
 
 export const DIFF_COLOR: Record<string, string> = {
-  Easy: "text-easy",
-  Medium: "text-medium",
-  Hard: "text-hard",
+  Easy: "text-diff-easy",
+  Medium: "text-diff-medium",
+  Hard: "text-diff-hard",
 };

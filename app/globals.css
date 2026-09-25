@@ -2,27 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Semantic token layer. Every colour in the app resolves through one of these.
+  Values are space-separated RGB channels so Tailwind can apply <alpha-value>
+  (e.g. bg-brand/10). Light is the :root default; .dark is set by next-themes.
+*/
 :root {
+  color-scheme: light;
+
+  --surface: 247 247 245;
+  --surface-raised: 255 255 255;
+  --surface-overlay: 255 255 255;
+  --surface-sunken: 239 239 236;
+
+  --line: 228 228 225;
+  --line-strong: 207 207 202;
+
+  --fg: 24 24 27;
+  --fg-muted: 92 95 102;
+  --fg-subtle: 101 104 111;
+
+  --brand: 59 91 219;
+  --brand-fg: 255 255 255;
+
+  --success: 21 128 61;
+  --warning: 180 83 9;
+  --danger: 220 38 38;
+  --flame: 194 65 12;
+
+  --diff-easy: 21 128 61;
+  --diff-medium: 180 83 9;
+  --diff-hard: 220 38 38;
+
+  --ring: 59 91 219;
+}
+
+.dark {
   color-scheme: dark;
+
+  --surface: 10 10 11;
+  --surface-raised: 18 19 22;
+  --surface-overlay: 26 28 33;
+  --surface-sunken: 5 5 6;
+
+  --line: 35 37 42;
+  --line-strong: 51 54 61;
+
+  --fg: 232 233 236;
+  --fg-muted: 155 161 173;
+  --fg-subtle: 124 131 143;
+
+  --brand: 110 139 255;
+  --brand-fg: 10 10 11;
+
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --danger: 239 68 68;
+  --flame: 245 158 11;
+
+  --diff-easy: 34 197 94;
+  --diff-medium: 245 158 11;
+  --diff-hard: 239 68 68;
+
+  --ring: 110 139 255;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-surface text-fg;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* One focus treatment for the whole app, driven by the token layer. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--ring));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
 @layer components {
   .input {
-    @apply w-full rounded-md bg-panel2 border border-border px-3 py-2 text-sm outline-none focus:border-accent;
+    @apply w-full rounded-md bg-surface-sunken border border-line px-3 py-2 text-sm text-fg
+           placeholder:text-fg-subtle outline-none transition-colors
+           focus:border-brand;
+  }
+
+  /* Numerals that must not jitter as they update (counts, ranks, percentages). */
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
   }
 }
 
-html,
-body {
-  background: #0b0e14;
-  color: #e6e9ef;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ---- sign-in page motion ---- */
+/* ---- motion ---- */
 @keyframes auroraDrift {
   0%   { transform: translate3d(0, 0, 0) scale(1); }
   50%  { transform: translate3d(4%, -6%, 0) scale(1.15); }
@@ -37,13 +114,22 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes ringPulse {
-  0%   { box-shadow: 0 0 0 0 rgba(91, 140, 255, 0.45); }
-  70%  { box-shadow: 0 0 0 14px rgba(91, 140, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(91, 140, 255, 0); }
+  0%   { box-shadow: 0 0 0 0 rgb(var(--brand) / 0.45); }
+  70%  { box-shadow: 0 0 0 14px rgb(var(--brand) / 0); }
+  100% { box-shadow: 0 0 0 0 rgb(var(--brand) / 0); }
 }
 @keyframes sheen {
   0%   { transform: translateX(-120%); }
   60%, 100% { transform: translateX(220%); }
+}
+@keyframes popIn {
+  0%   { transform: scale(0.85); opacity: 0; }
+  60%  { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .aurora-blob { animation: auroraDrift 16s ease-in-out infinite; will-change: transform; }
@@ -51,19 +137,29 @@ body {
 .animate-float-slow { animation: floatY 9s ease-in-out infinite; }
 .animate-fade-up { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
 .ring-pulse { animation: ringPulse 2.4s ease-out infinite; }
+.animate-pop-in { animation: popIn 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
+.animate-toast-in { animation: toastIn 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
 .btn-sheen { position: relative; overflow: hidden; }
 .btn-sheen::after {
   content: "";
   position: absolute;
   top: 0; left: 0; height: 100%; width: 40%;
-  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.18), transparent);
+  background: linear-gradient(100deg, transparent, rgb(255 255 255 / 0.18), transparent);
   transform: translateX(-120%);
 }
 .btn-sheen:hover::after { animation: sheen 0.9s ease; }
 
 @media (prefers-reduced-motion: reduce) {
-  .aurora-blob, .animate-float, .animate-float-slow, .ring-pulse { animation: none; }
+  .aurora-blob,
+  .animate-float,
+  .animate-float-slow,
+  .ring-pulse,
+  .animate-pop-in,
+  .animate-toast-in {
+    animation: none;
+  }
   .animate-fade-up { opacity: 1; animation: none; }
+  .btn-sheen:hover::after { animation: none; }
 }
 
 ::-webkit-scrollbar {
@@ -71,6 +167,9 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #252d3d;
+  background: rgb(var(--line-strong));
   border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }
